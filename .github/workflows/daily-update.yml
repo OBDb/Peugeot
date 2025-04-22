@@ -13,8 +13,8 @@ permissions:
 
 # Make prefixes for this repo
 env:
-  FILTER_PREFIX: Make-
-  SIGNAL_PREFIX: MAKE
+  FILTER_PREFIX: Peugeot-
+  SIGNAL_PREFIX: PEUGEOT
 
 concurrency:
   group: "data-update"
