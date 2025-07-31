@@ -3,13 +3,92 @@
   "signals": [
     {"id": "PEUGEOT_HVBAT_SOC", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 512, "unit": "percent" }, "name": "HV battery charge", "suggestedMetric": "stateOfCharge"}
   ]},
+{ "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0F1"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_TP_FL_V2", "path": "Tires", "fmt": {          "len": 8, "max": 101.49,             "mul": 0.398,             "unit": "psi"     }, "name": "Front left tire pressure",    "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "PEUGEOT_TT_FL_V2", "path": "Tires", "fmt": {"bix": 8, "len": 8, "max": 205,    "min": -50,               "add": -50, "unit": "celsius" }, "name": "Front left tire temperature"}
+  ]},
+{ "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0F2"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_TP_FR_V2", "path": "Tires", "fmt": {          "len": 8, "max": 101.49,             "mul": 0.398,             "unit": "psi"     }, "name": "Front right tire pressure",    "suggestedMetric": "frontRightTirePressure"},
+    {"id": "PEUGEOT_TT_FR_V2", "path": "Tires", "fmt": {"bix": 8, "len": 8, "max": 205,    "min": -50,               "add": -50, "unit": "celsius" }, "name": "Front right tire temperature"}
+  ]},
+{ "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0F3"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_TP_RR_V2", "path": "Tires", "fmt": {          "len": 8, "max": 101.49,             "mul": 0.398,             "unit": "psi"     }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
+    {"id": "PEUGEOT_TT_RR_V2", "path": "Tires", "fmt": {"bix": 8, "len": 8, "max": 205,    "min": -50,               "add": -50, "unit": "celsius" }, "name": "Rear right tire temperature"}
+  ]},
+{ "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0F4"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_TP_RL_V2", "path": "Tires", "fmt": {          "len": 8, "max": 101.49,             "mul": 0.398,             "unit": "psi"     }, "name": "Rear left tire pressure",    "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "PEUGEOT_TT_RL_V2", "path": "Tires", "fmt": {"bix": 8, "len": 8, "max": 205,    "min": -50,               "add": -50, "unit": "celsius" }, "name": "Rear left tire temperature"}
+  ]},
 { "hdr": "742", "fcm1": true, "dbg": true, "cmd": {"22": "A022"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_TP_FL_V2", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 255, "unit": "psi" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "PEUGEOT_TP_FR_V2", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
-    {"id": "PEUGEOT_TP_RL_V2", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 255, "unit": "psi" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "PEUGEOT_TP_RR_V2", "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 255, "unit": "psi" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"},
+    {"id": "PEUGEOT_TP_FL_V3", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 255, "unit": "psi" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "PEUGEOT_TP_FR_V3", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 255, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
+    {"id": "PEUGEOT_TP_RL_V3", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 255, "unit": "psi" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "PEUGEOT_TP_RR_V3", "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 255, "unit": "psi" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"},
     {"id": "PEUGEOT_TP_SPARE", "path": "Tires", "fmt": {"bix": 56, "len": 8, "max": 255, "unit": "psi" }, "name": "Spare tire pressure"}
+  ]},
+{ "hdr": "763", "rax": "4E3", "fcm1": true, "dbg": true, "cmd": {"22": "032D"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_HIGHBEAMS_ON", "path": "Control", "fmt": {"bix": 3, "len": 1, "max": 1, "unit": "offon" }, "name": "High beams"},
+    {"id": "PEUGEOT_HIGHBEAMS_MODE", "path": "Control", "name": "High beam mode", "fmt": {"bix": 4, "len": 4, "map": {
+          "0": { "description": "Off",  "value": "OFF" },
+          "1": { "description": "On",   "value": "ON" },
+          "2": { "description": "Held", "value": "HELD" }
+        }}
+    },
+    {"id": "PEUGEOT_REAR_WIPER", "path": "Control", "name": "Rear wiper", "fmt": {"bix": 12, "len": 4, "map": {
+          "0": { "description": "Off",   "value": "OFF" },
+          "1": { "description": "Spray", "value": "SPRAY" },
+          "2": { "description": "Auto",  "value": "AUTO" },
+          "4": { "description": "On",    "value": "ON" }
+        }}
+    }
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "04FE"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ATF_T", "path": "Transmission", "fmt": { "len": 8, "max": 300, "min": -30, "mul": 1.8, "add": -40, "unit": "fahrenheit" }, "name": "Transmission temperature"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"22": "5503"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_GEAR", "path": "Transmission", "name": "Current gear", "description": "The automatic transmission gear.", "fmt": {"bix": 4, "len": 4, "map": {
+          "0":  { "description": "Neutral",      "value": "NEUTRAL" },
+          "1":  { "description": "First gear",   "value": "1" },
+          "2":  { "description": "Second gear",  "value": "2" },
+          "3":  { "description": "Third gear",   "value": "3" },
+          "4":  { "description": "Fourth gear",  "value": "4" },
+          "5":  { "description": "Fifth gear",   "value": "5" },
+          "6":  { "description": "Sixth gear",   "value": "6" },
+          "7":  { "description": "Seventh gear", "value": "7" },
+          "8":  { "description": "Eighth gear",  "value": "8" },
+          "9":  { "description": "Ninth gear",   "value": "9" },
+          "10": { "description": "Tenth gear",   "value": "10" },
+          "11": { "description": "Rear",         "value": "REAR" },
+          "13": { "description": "Park",         "value": "PARK" }
+        }}
+    }
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"22": "5504"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_GEAR_TARGET", "path": "Transmission", "name": "Target gear", "description": "The target gear.", "fmt": {"bix": 4, "len": 4, "map": {
+          "0":  { "description": "Neutral",      "value": "NEUTRAL" },
+          "1":  { "description": "First gear",   "value": "1" },
+          "2":  { "description": "Second gear",  "value": "2" },
+          "3":  { "description": "Third gear",   "value": "3" },
+          "4":  { "description": "Fourth gear",  "value": "4" },
+          "5":  { "description": "Fifth gear",   "value": "5" },
+          "6":  { "description": "Sixth gear",   "value": "6" },
+          "7":  { "description": "Seventh gear", "value": "7" },
+          "8":  { "description": "Eighth gear",  "value": "8" },
+          "9":  { "description": "Ninth gear",   "value": "9" },
+          "10": { "description": "Tenth gear",   "value": "10" },
+          "11": { "description": "Rear",         "value": "REAR" },
+          "13": { "description": "Park",         "value": "PARK" }
+        }}
+    }
   ]},
 { "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "051A"}, "freq": 0.5,
   "signals": [
