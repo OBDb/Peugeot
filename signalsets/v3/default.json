@@ -3,6 +3,20 @@
   "signals": [
     {"id": "PEUGEOT_HVBAT_SOC", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 512, "unit": "percent" }, "name": "HV battery charge", "suggestedMetric": "stateOfCharge"}
   ]},
+{ "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0A1"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_TP_FL_AC", "path": "Tires", "fmt": {           "len": 8, "max": 255, "unit": "psi" }, "name": "Front left tire pressure, altitude compensated",  "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "PEUGEOT_TP_FR_AC", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "psi" }, "name": "Front right tire pressure, altitude compensated", "suggestedMetric": "frontRightTirePressure"},
+    {"id": "PEUGEOT_TP_RR_AC", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 255, "unit": "psi" }, "name": "Rear right tire pressure, altitude compensated",  "suggestedMetric": "rearRightTirePressure"},
+    {"id": "PEUGEOT_TP_RL_AC", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 255, "unit": "psi" }, "name": "Rear left tire pressure, altitude compensated",   "suggestedMetric": "rearLeftTirePressure"}
+  ]},
+{ "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0A5"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_TP_RL_VALID", "path": "Tires", "fmt": {"bix": 4, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear left tire pressure, valid?"},
+    {"id": "PEUGEOT_TP_RR_VALID", "path": "Tires", "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear right tire pressure, valid?"},
+    {"id": "PEUGEOT_TP_FR_VALID", "path": "Tires", "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front right tire pressure, valid?"},
+    {"id": "PEUGEOT_TP_FL_VALID", "path": "Tires", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front left tire pressure, valid?"}
+  ]},
 { "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0F1"}, "freq": 5,
   "signals": [
     {"id": "PEUGEOT_TP_FL_V2", "path": "Tires", "fmt": {          "len": 8, "max": 101.49,             "mul": 0.398,             "unit": "psi"     }, "name": "Front left tire pressure",    "suggestedMetric": "frontLeftTirePressure"},
@@ -47,6 +61,12 @@
           "4": { "description": "On",    "value": "ON" }
         }}
     }
+  ]},
+{ "hdr": "7AB", "rax": "52B", "fcm1": true, "dbg": true, "cmd": {"22": "2802"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_GPS_HEADING",      "path": "GPS", "fmt": {"bix": 152, "len": 16, "max": 65535, "unit": "degrees" }, "name": "Heading"},
+    {"id": "PEUGEOT_GPS_SATS_TRACKED", "path": "GPS", "fmt": {"bix": 200, "len": 4,  "max": 15,    "unit": "scalar"  }, "name": "Satellites, tracked"},
+    {"id": "PEUGEOT_GPS_SATS_VISIBLE", "path": "GPS", "fmt": {"bix": 204, "len": 4,  "max": 15,    "unit": "scalar"  }, "name": "Satellites, visible"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "04FE"}, "freq": 1,
   "signals": [
