@@ -25,23 +25,31 @@
   ]},
 { "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0F1"}, "freq": 15,
   "signals": [
-    {"id": "PEUGEOT_TP_FL_V2", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 63.75,             "div": 4,             "unit": "psi"     }, "name": "Front left tire pressure",    "suggestedMetric": "frontLeftTirePressure"},
-    {"id": "PEUGEOT_TT_FL_V2", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 205,   "min": -50,           "add": -50, "unit": "celsius" }, "name": "Front left tire temperature", "suggestedMetric": "frontLeftTireTemperature"}
+    {"id": "PEUGEOT_TP_FL_F",  "path": "Tires", "fmt": {           "len": 16, "max": 6553.5,             "div": 10,             "unit": "kilopascal" }, "name": "Front left tire pressure",    "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "PEUGEOT_TP_FL_V2", "path": "Tires", "fmt": {"bix": 8,  "len": 8,  "max": 63.75,              "div": 4,              "unit": "psi"        }, "name": "Front left tire pressure",    "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "PEUGEOT_TT_FL_V2", "path": "Tires", "fmt": {"bix": 16, "len": 8,  "max": 205,    "min": -50,            "add": -50, "unit": "celsius"    }, "name": "Front left tire temperature", "suggestedMetric": "frontLeftTireTemperature"},
+    {"id": "PEUGEOT_TT_FL_F",  "path": "Tires", "fmt": {"bix": 32, "len": 8,  "max": 215,    "min": -40,            "add": -40, "unit": "celsius"    }, "name": "Front left tire temperature"}
   ]},
 { "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0F2"}, "freq": 15,
   "signals": [
-    {"id": "PEUGEOT_TP_FR_V2", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 63.75,             "div": 4,             "unit": "psi"     }, "name": "Front right tire pressure",    "suggestedMetric": "frontRightTirePressure"},
-    {"id": "PEUGEOT_TT_FR_V2", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 205,   "min": -50,           "add": -50, "unit": "celsius" }, "name": "Front right tire temperature", "suggestedMetric": "frontRightTireTemperature"}
+    {"id": "PEUGEOT_TP_FR_F",  "path": "Tires", "fmt": {           "len": 16, "max": 6553.5,             "div": 10,             "unit": "kilopascal" }, "name": "Front right tire pressure",    "suggestedMetric": "frontRightTirePressure"},
+    {"id": "PEUGEOT_TP_FR_V2", "path": "Tires", "fmt": {"bix": 8,  "len": 8,  "max": 63.75,              "div": 4,              "unit": "psi"        }, "name": "Front right tire pressure",    "suggestedMetric": "frontRightTirePressure"},
+    {"id": "PEUGEOT_TT_FR_V2", "path": "Tires", "fmt": {"bix": 16, "len": 8,  "max": 205,    "min": -50,            "add": -50, "unit": "celsius"    }, "name": "Front right tire temperature", "suggestedMetric": "frontRightTireTemperature"},
+    {"id": "PEUGEOT_TT_FR_F",  "path": "Tires", "fmt": {"bix": 32, "len": 8,  "max": 215,    "min": -40,            "add": -40, "unit": "celsius"    }, "name": "Front right tire temperature"}
   ]},
 { "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0F3"}, "freq": 15,
   "signals": [
-    {"id": "PEUGEOT_TP_RR_V2", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 63.75,             "div": 4,             "unit": "psi"     }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
-    {"id": "PEUGEOT_TT_RR_V2", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 205,   "min": -50,           "add": -50, "unit": "celsius" }, "name": "Rear right tire temperature", "suggestedMetric": "rearRightTireTemperature"}
+    {"id": "PEUGEOT_TP_RR_F",  "path": "Tires", "fmt": {           "len": 16, "max": 6553.5,             "div": 10,             "unit": "kilopascal" }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
+    {"id": "PEUGEOT_TP_RR_V2", "path": "Tires", "fmt": {"bix": 8,  "len": 8,  "max": 63.75,              "div": 4,              "unit": "psi"        }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
+    {"id": "PEUGEOT_TT_RR_V2", "path": "Tires", "fmt": {"bix": 16, "len": 8,  "max": 205,    "min": -50,            "add": -50, "unit": "celsius"    }, "name": "Rear right tire temperature", "suggestedMetric": "rearRightTireTemperature"},
+    {"id": "PEUGEOT_TT_RR_F",  "path": "Tires", "fmt": {"bix": 32, "len": 8,  "max": 215,    "min": -40,            "add": -40, "unit": "celsius"    }, "name": "Rear right tire temperature"}
   ]},
 { "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0F4"}, "freq": 15,
   "signals": [
-    {"id": "PEUGEOT_TP_RL_V2", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 63.75,             "div": 4,             "unit": "psi"     }, "name": "Rear left tire pressure",    "suggestedMetric": "rearLeftTirePressure"},
-    {"id": "PEUGEOT_TT_RL_V2", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 205,   "min": -50,           "add": -50, "unit": "celsius" }, "name": "Rear left tire temperature", "suggestedMetric": "rearLeftTireTemperature"}
+    {"id": "PEUGEOT_TP_RL_F",  "path": "Tires", "fmt": {           "len": 16, "max": 6553.5,             "div": 10,             "unit": "kilopascal" }, "name": "Rear left tire pressure",    "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "PEUGEOT_TP_RL_V2", "path": "Tires", "fmt": {"bix": 8,  "len": 8,  "max": 63.75,              "div": 4,              "unit": "psi"        }, "name": "Rear left tire pressure",    "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "PEUGEOT_TT_RL_V2", "path": "Tires", "fmt": {"bix": 16, "len": 8,  "max": 205,    "min": -50,            "add": -50, "unit": "celsius"    }, "name": "Rear left tire temperature", "suggestedMetric": "rearLeftTireTemperature"},
+    {"id": "PEUGEOT_TT_RL_F",  "path": "Tires", "fmt": {"bix": 32, "len": 8,  "max": 215,    "min": -40,            "add": -40, "unit": "celsius"    }, "name": "Rear left tire temperature"}
   ]},
 { "hdr": "742", "rax": "4C2", "fcm1": true, "dbg": true, "cmd": {"22": "A077"}, "freq": 15,
   "signals": [
@@ -93,13 +101,109 @@
   "signals": [
     {"id": "PEUGEOT_TP_RR_7DA", "path": "Tires", "fmt": { "len": 8, "max": 92, "mul": 1541, "div": 4250, "unit": "psi" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "17"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_LINE_P_DUTY", "path": "Engine", "fmt": {           "len": 16, "max": 100, "div": 655, "unit": "percent" }, "name": "Line pressure duty cycle"},
+    {"id": "PEUGEOT_LINE_P",      "path": "Engine", "fmt": {"bix": 16, "len": 8,  "max": 255,             "unit": "psi"     }, "name": "Line pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "18"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_ATF_T_V_2", "path": "Transmission", "fmt": { "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature v.2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "23"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_AAT_V2", "path": "Engine",  "fmt": {           "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Ambient air temperature"},
+    {"id": "PEUGEOT_BAT_T",  "path": "Battery", "fmt": {"bix": 48, "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Battery temperature"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "2D"}, "freq": 5,
   "signals": [
     {"id": "PEUGEOT_EOT_212D", "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 376, "min": -83, "mul": 9, "div": 5, "add": -83, "unit": "fahrenheit" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "3A"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_TRANS_SUMP_T_VAR_1",    "path": "Transmission", "fmt": {"bix": 80, "len": 8,  "max": 1020, "mul": 4,                        "unit": "fahrenheit" }, "name": "Transmission sump temperature, variant 1"},
+    {"id": "PEUGEOT_TRANS_TQ_CONV_T_VAR_1", "path": "Transmission", "fmt": {"bix": 96, "len": 16, "max": 1875, "mul": 9, "div": 320, "add": 32, "unit": "fahrenheit" }, "name": "Transmission torque converter temperature, variant 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "48"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EXH_GAS_T_1_7E0", "path": "Engine", "fmt": {"bix": 112, "len": 16, "max": 32767, "div": 2, "unit": "fahrenheit" }, "name": "Exhaust gas temperature 1"},
+    {"id": "PEUGEOT_EXH_GAS_T_2_7E0", "path": "Engine", "fmt": {"bix": 288, "len": 16, "max": 32767, "div": 2, "unit": "fahrenheit" }, "name": "Exhaust gas temperature 2"},
+    {"id": "PEUGEOT_DPF_REGEN",       "path": "Engine", "fmt": {"bix": 383, "len": 1,  "max": 1,               "unit": "offon"      }, "name": "Diesel particulate filter regeneration"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "4D"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_SOOT_LOAD", "path": "Engine", "fmt": {"bix": 8, "len": 16, "max": 511, "div": 128, "unit": "gravity" }, "name": "Soot load"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "57"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_SOOT_LOAD_BASED_ON_P", "path": "Engine", "fmt": {          "len": 8,  "max": 34.55, "div": 100, "add": 32, "unit": "unknown" }, "name": "Soot load based on delta pressure"},
+    {"id": "PEUGEOT_ESITMATED_SOOT",       "path": "Engine", "fmt": {"bix": 8, "len": 16, "max": 65535,                        "unit": "seconds" }, "name": "Esitmated soot removal time"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "A7"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AC_HIGH_SIDE_P_V2", "path": "Engine", "fmt": {"bix": 48, "len": 16, "max": 1191, "div": 55, "unit": "psi" }, "name": "Air conditioning high side pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "A8"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_FLI", "path": "Fuel", "fmt": {"bix": 96, "len": 16, "max": 255, "div": 256, "unit": "percent" }, "name": "Fuel level"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "B2"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_BOOST_P_ESTIMATE", "path": "Engine",  "fmt": {"bix": 32,  "len": 16, "max": 148,              "div": 441,             "unit": "psi"        }, "name": "Boost pressure estimate"},
+    {"id": "PEUGEOT_CRANKCASE_P",      "path": "Engine",  "fmt": {"bix": 96,  "len": 16, "max": 37.21,            "div": 1761,            "unit": "psi"        }, "name": "Crankcase pressure"},
+    {"id": "PEUGEOT_CHG_T",            "path": "Battery", "fmt": {"bix": 144, "len": 16, "max": 953,   "mul": 10, "div": 711,  "add": 32, "unit": "fahrenheit" }, "name": "Charge temperature"},
+    {"id": "PEUGEOT_CHG_P",            "path": "Battery", "fmt": {"bix": 160, "len": 16, "max": 296,              "div": 221,             "unit": "psi"        }, "name": "Charge pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "B3"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_RADIATOR_FAN_SPD", "path": "Movement", "fmt": {"bix": 80, "len": 8, "max": 132600, "mul": 520, "unit": "rpm" }, "name": "Radiator fan speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "B4"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_FUEL_P_SENS_1000_S", "path": "Fuel",    "fmt": {           "len": 16, "max": 118,            "div": 552,            "unit": "psi"        }, "name": "Fuel pressure sensor, 1000's psi"},
+    {"id": "PEUGEOT_CHG_AIR_COOLER_T",   "path": "Battery", "fmt": {"bix": 96, "len": 16, "max": 1875, "mul": 9, "div": 320, "add": 32, "unit": "fahrenheit" }, "name": "Charge air cooler outlet temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "CA"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_OUTPUT_SHFT_SPD",       "path": "Movement",     "fmt": {"bix": 64, "len": 16, "max": 8191,           "div": 8,              "unit": "rpm"        }, "name": "Output shaft speed"},
+    {"id": "PEUGEOT_TRANS_SUMP_T_VAR_2",    "path": "Transmission", "fmt": {"bix": 80, "len": 8,  "max": 1020, "mul": 4,                        "unit": "fahrenheit" }, "name": "Transmission sump temperature, variant 2"},
+    {"id": "PEUGEOT_TRANS_TQ_CONV_T_VAR_2", "path": "Transmission", "fmt": {"bix": 96, "len": 16, "max": 1875, "mul": 9, "div": 320, "add": 32, "unit": "fahrenheit" }, "name": "Transmission torque converter temperature, variant 2"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D2"}, "freq": 5,
   "signals": [
     {"id": "PEUGEOT_EOT_21D2", "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D6"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_DPF_DELTA_P",      "path": "Engine", "fmt": {            "len": 8,  "max": 37.23, "mul": 73,  "div": 500,            "unit": "psi"        }, "name": "Diesel particulate filter delta pressure"},
+    {"id": "PEUGEOT_TIME_SINCE_REGEN", "path": "Engine", "fmt": {"bix": 32,  "len": 16, "max": 1638,              "div": 40,             "unit": "seconds"    }, "name": "Time since regen started"},
+    {"id": "PEUGEOT_EXH_GAS_T_1",      "path": "Engine", "fmt": {"bix": 80,  "len": 8,  "max": 7376,  "mul": 144, "div": 5,   "add": 32, "unit": "fahrenheit" }, "name": "Exhaust gas temperature 1"},
+    {"id": "PEUGEOT_EXH_GAS_T_2",      "path": "Engine", "fmt": {"bix": 176, "len": 16, "max": 7404,  "mul": 9,   "div": 80,  "add": 32, "unit": "fahrenheit" }, "name": "Exhaust gas temperature 2"},
+    {"id": "PEUGEOT_EXH_GAS_T_3",      "path": "Engine", "fmt": {"bix": 208, "len": 16, "max": 7404,  "mul": 9,   "div": 80,  "add": 32, "unit": "fahrenheit" }, "name": "Exhaust gas temperature 3"},
+    {"id": "PEUGEOT_EXH_GAS_T_4",      "path": "Engine", "fmt": {"bix": 256, "len": 16, "max": 7404,  "mul": 9,   "div": 80,  "add": 32, "unit": "fahrenheit" }, "name": "Exhaust gas temperature 4"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D7"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EGR_AIRFLOW_CTRL_VLV", "path": "Engine", "fmt": {"bix": 32, "len": 16, "max": 511, "mul": 39, "div": 5000, "unit": "percent" }, "name": "Exhaust gas recirculation airflow control valve position"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D8"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ESTIMATED_NO",        "path": "Fuel",   "fmt": {           "len": 16, "max": 18.08, "div": 3624, "unit": "unknown" }, "name": "Estimated NO accumulation via fuel consumption"},
+    {"id": "PEUGEOT_DPF_REGEN_ACTIVE_V2", "path": "Engine", "fmt": {"bix": 79, "len": 1,  "max": 1,                  "unit": "offon"   }, "name": "Diesel particulate filter regen active"},
+    {"id": "PEUGEOT_REGEN_ENABLE_ON_OFF", "path": "Engine", "fmt": {"bix": 95, "len": 1,  "max": 1,                  "unit": "offon"   }, "name": "Regen enable, on/off – alternative"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D9"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EGR_VLV_CMD_POSTIION", "path": "Engine", "fmt": {            "len": 16, "max": 543,             "div": 128, "add": 32, "unit": "percent"          }, "name": "Exhaust gas recirculation valve, commanded postiion"},
+    {"id": "PEUGEOT_EGR_ORIFICE_T",        "path": "Engine", "fmt": {"bix": 40,  "len": 16, "max": 29522, "mul": 9, "div": 20,  "add": 32, "unit": "fahrenheit"       }, "name": "Exhaust gas recirculation orifice temperature"},
+    {"id": "PEUGEOT_EGR_FLOW",             "path": "Engine", "fmt": {"bix": 120, "len": 16, "max": 511,             "div": 128,            "unit": "kilogramsPerHour" }, "name": "Exhaust gas recirculation flow"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "DA"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_VGT_VIRTUAL_CHG_FLOW", "path": "Battery",  "fmt": {            "len": 16, "max": 264,    "mul": 0.0035436904,            "add": 32, "unit": "kilogramsPerHour" }, "name": "VGT virtual charge flow"},
+    {"id": "PEUGEOT_TURBO_SPD",            "path": "Movement", "fmt": {"bix": 32,  "len": 16, "max": 511992, "mul": 125,          "div": 16,            "unit": "rpm"              }, "name": "Turbo speed"},
+    {"id": "PEUGEOT_VGT_COMP_OULET_AIR_T", "path": "Engine",   "fmt": {"bix": 112, "len": 16, "max": 29522,  "mul": 9,            "div": 20, "add": 32, "unit": "fahrenheit"       }, "name": "VGT compressor oulet air temperature"},
+    {"id": "PEUGEOT_VGT_COMP_INLET_AIR_T", "path": "Engine",   "fmt": {"bix": 144, "len": 16, "max": 29522,  "mul": 9,            "div": 20, "add": 32, "unit": "fahrenheit"       }, "name": "VGT compressor inlet air temperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0109"}, "freq": 1,
   "signals": [
@@ -401,13 +505,127 @@
   "signals": [
     {"id": "PEUGEOT_IAT_70B8", "path": "Engine", "fmt": { "len": 16, "max": 1260.2976, "min": -40, "mul": 0.0198412698, "add": -40, "unit": "celsius" }, "name": "Intake manifold air temperature"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A001"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_TQ_CONV_SLIP_VAR_2", "path": "Transmission", "fmt": {"bix": 48, "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "rpm" }, "name": "Torque converter slip, variant 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A002"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_ATF_T_VAR_2", "path": "Transmission", "fmt": { "len": 8, "max": 401, "min": -58, "mul": 9, "div": 5, "add": -58, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A003"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_TIME_SINCE_ACTIVE", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 65535, "unit": "hours" }, "name": "Time since active regen"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A004"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_DEF_T", "path": "Engine", "fmt": {"bix": 24, "len": 8, "max": 127, "min": -128, "sign": true, "unit": "percent" }, "name": "DEF temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A006"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_DEF_LEVEL", "path": "Engine", "fmt": {"bix": 24, "len": 8, "max": 255, "unit": "percent" }, "name": "DEF level"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A00A"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AFT_DPF_OULET_P_SENS", "path": "Engine", "fmt": { "len": 16, "max": 294, "mul": 9, "div": 2000, "unit": "psi" }, "name": "AFT DPF oulet pressure sensor"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A043"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_FLI_AVG", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Fuel level average"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A054"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BOOST_P", "path": "Engine", "fmt": { "len": 16, "max": 150, "div": 435, "unit": "psi" }, "name": "Boost pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A067"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_FUEL_RAIL_P_V2", "path": "Fuel", "fmt": {"bix": 8, "len": 16, "max": 131070, "mul": 2, "unit": "bars" }, "name": "Fuel rail pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A09F"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_GEAR_CMD", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission gear, commanded"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0A0"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_GEAR_V3", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Transmission gear, actual"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0A3"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_TRANS_SUMP_T", "path": "Transmission", "fmt": { "len": 16, "max": 921, "mul": 9, "div": 640, "unit": "fahrenheit" }, "name": "Transmission sump temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0A4"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_TRANS_TQ_CONV_T", "path": "Transmission", "fmt": { "len": 16, "max": 1843, "mul": 9, "div": 320, "unit": "fahrenheit" }, "name": "Transmission torque converter temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0BD"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EXH_GAS_T_1_DOC", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 32799, "min": -32736, "add": 32, "sign": true, "unit": "fahrenheit" }, "name": "Exhaust gas temperature 1 – DOC inlet"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0C2"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EXH_GAS_T_2_DOC", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 32799, "min": -32736, "add": 32, "sign": true, "unit": "fahrenheit" }, "name": "Exhaust gas temperature 2 – DOC outlet"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0C4"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EXH_GAS_T_3_DPF", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 32799, "min": -32736, "add": 32, "sign": true, "unit": "fahrenheit" }, "name": "Exhaust gas temperature 3 – DPF outlet"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0C6"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EXH_GAS_T_4_SCR_CAT", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 32799, "min": -32736, "add": 32, "sign": true, "unit": "fahrenheit" }, "name": "Exhaust gas temperature 4 – SCR CAT midbed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0C8"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EXH_GAS_T_5_SCR_CAT", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 32799, "min": -32736, "add": 32, "sign": true, "unit": "fahrenheit" }, "name": "Exhaust gas temperature 5 – SCR CAT oulet"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0DA"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EGR_VLV_POS", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve position"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0DC"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EGR_T", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 921, "mul": 9, "div": 640, "unit": "percent" }, "name": "Exhaust gas recirculation temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0E4"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_TURBOCHARGER_SPD", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 511992, "mul": 125, "div": 16, "unit": "rpm" }, "name": "Turbocharger speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0EC"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_TURBO_COMP_INLET_T", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 1868, "mul": 36, "div": 5, "add": 32, "unit": "fahrenheit" }, "name": "Turbo compressor inlet temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0EE"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_CHARGED_AIR_COOLER_T", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 18906, "mul": 36, "div": 125, "add": 32, "unit": "fahrenheit" }, "name": "Charged air cooler outlet temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A114"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AFTERTREATMENT_INT", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Aftertreatment intake nox, ppm"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A11A"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AFTERTREATMENT", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "Aftertreatment outlet nox, ppm"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A129"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_DEF_DOSING_RATE_GPH", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "scalar" }, "name": "DEF dosing rate, gph"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A12B"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_DEF_QUALITY", "path": "Engine", "fmt": {"bix": 24, "len": 8, "max": 255, "unit": "percent" }, "name": "DEF quality"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B010"}, "freq": 5,
   "signals": [
-    {"id": "PEUGEOT_ATF_T_VAR_3", "path": "Transmission", "fmt": { "len": 16, "max": 1023.9843, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 3"}
+    {"id": "PEUGEOT_ATF_T_VAR_3", "path": "Transmission", "fmt": { "len": 16, "max": 1023.9843, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 3"},
+    {"id": "PEUGEOT_ATF_T_VAR_1", "path": "Transmission", "fmt": { "len": 16, "max": 1023,      "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 1"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B028"}, "freq": 0.25,
   "signals": [
-    {"id": "PEUGEOT_TQ_CONV_SLIP", "path": "Transmission", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "rpm" }, "name": "Torque converter slip"}
+    {"id": "PEUGEOT_TQ_CONV_SLIP",       "path": "Transmission", "fmt": { "len": 16, "max": 32767, "min": -32768,                       "sign": true, "unit": "rpm" }, "name": "Torque converter slip"},
+    {"id": "PEUGEOT_TQ_CONV_SLIP_VAR_1", "path": "Transmission", "fmt": { "len": 16, "max": 460,   "min": -460,   "mul": 9, "div": 640, "sign": true, "unit": "rpm" }, "name": "Torque converter slip, variant 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "B09B"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_TQ_CONV_LOCK", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Torque converter lock status"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"21": "18"}, "freq": 1,
   "signals": [
@@ -418,6 +636,10 @@
   "signals": [
     {"id": "PEUGEOT_ATF_T_2130", "path": "Transmission", "fmt": {"bix": 88, "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 3"}
   ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "3A"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_TRANS_SUMP_T_7E1", "path": "Transmission", "fmt": {"bix": 72, "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Transmission sump temperature"}
+  ]},
 { "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"21": "5C"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_ATF_T_3RDGEN_V2", "path": "Engine",       "fmt": {"bix": 32, "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Automatic transmission fluid temperature"},
@@ -425,11 +647,13 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "72"}, "freq": 5,
   "signals": [
-    {"id": "PEUGEOT_ATF_T_VAR_1", "path": "Transmission", "fmt": {"bix": 32, "len": 16, "max": 1023.9843, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 1"}
+    {"id": "PEUGEOT_ATF_T_VAR_1_V2", "path": "Transmission", "fmt": {"bix": 32, "len": 16, "max": 1023.9843, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 1"},
+    {"id": "PEUGEOT_ATF_T_V3",       "path": "Transmission", "fmt": {"bix": 32, "len": 16, "max": 1023,      "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "04FE"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_ATF_T", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Automatic transmission fluid temperature"}
+    {"id": "PEUGEOT_ATF_T",   "path": "Engine",       "fmt": { "len": 8, "max": 215, "min": -40,             "add": -40, "unit": "celsius"    }, "name": "Automatic transmission fluid temperature"},
+    {"id": "PEUGEOT_ATF_T_2", "path": "Transmission", "fmt": { "len": 8, "max": 300, "min": -30, "mul": 1.8, "add": -40, "unit": "fahrenheit" }, "name": "Transmission temperature"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"22": "08DF"}, "freq": 5,
   "signals": [
@@ -717,7 +941,413 @@
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "1004"}, "freq": 30,
   "signals": [
-    {"id": "PEUGEOT_BATT_V_BCM", "path": "Battery", "fmt": { "len": 8, "max": 25, "div": 10, "unit": "volts" }, "name": "Battery voltage, BCM"}
+    {"id": "PEUGEOT_BATT_V_BCM", "path": "Battery", "fmt": { "len": 8, "max": 25,   "div": 10, "unit": "volts" }, "name": "Battery voltage, BCM"},
+    {"id": "PEUGEOT_BCM_BAT_V",  "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Battery voltage, BCM", "suggestedMetric": "starterBatteryVoltage"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "019E"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_BAT_V", "path": "Battery", "fmt": { "len": 16, "max": 1127, "mul": 43, "div": 2500, "unit": "volts" }, "name": "Battery voltage"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "0301"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_HVBAT_CURRENT_BPCM", "path": "Battery", "fmt": {"bix": 64, "len": 16, "max": 6041, "min": -512, "div": 10, "add": -512.1, "unit": "amps" }, "name": "High voltage battery current from the battery pack control module"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "3027"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_ODO_V2", "path": "Trips", "fmt": { "len": 24, "max": 2700041, "mul": 32187, "div": 200000, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "3062"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EMOTOR_HVBAT_V", "path": "Battery", "fmt": { "len": 16, "max": 1310, "div": 50, "unit": "volts" }, "name": "Drive motor HV battery voltage"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "3063"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_EMOTOR_TQ_LIM", "path": "Engine", "fmt": { "len": 16, "max": 810, "min": -500, "div": 50, "add": -500, "unit": "newtonMeters" }, "name": "Drive motor torque limit"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "3064"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_EMOTOR_TQ_CMD",      "path": "Engine",   "fmt": {           "len": 16, "max": 810,   "min": -500,   "div": 50, "add": -500,   "unit": "newtonMeters" }, "name": "Drive motor torque, commanded"},
+    {"id": "PEUGEOT_EMOTOR_TQ_ACHIEVED", "path": "Engine",   "fmt": {"bix": 16, "len": 16, "max": 810,   "min": -500,   "div": 50, "add": -500,   "unit": "newtonMeters" }, "name": "Drive motor torque achieved"},
+    {"id": "PEUGEOT_EMOTOR_SPD_RPM",     "path": "Movement", "fmt": {"bix": 32, "len": 16, "max": 45535, "min": -20000,            "add": -20000, "unit": "rpm"          }, "name": "Drive motor speed"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "3065"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EMOTOR_STATOR_T",     "path": "Engine", "fmt": {           "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Drive motor stator temperature"},
+    {"id": "PEUGEOT_EMOTOR_INVERTER_T",   "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Drive motor inverter temperature model"},
+    {"id": "PEUGEOT_EMOTOR_INVERTER_T_0", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Drive motor inverter temperature 0"},
+    {"id": "PEUGEOT_EMOTOR_INVERTER_T_1", "path": "Engine", "fmt": {"bix": 24, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Drive motor inverter temperature 1"},
+    {"id": "PEUGEOT_EMOTOR_INVERTER_T_2", "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Drive motor inverter temperature 2"},
+    {"id": "PEUGEOT_EMOTOR_CLT_INLET_T",  "path": "Engine", "fmt": {"bix": 40, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Drive motor coolant inlet temperature"},
+    {"id": "PEUGEOT_EMOTOR_CLT_OUTLET_T", "path": "Engine", "fmt": {"bix": 48, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Drive motor coolant outlet temperature"},
+    {"id": "PEUGEOT_EMOTOR_PCB_T",        "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Drive motor PCB temperature"},
+    {"id": "PEUGEOT_EMOTOR_ROTOR_T",      "path": "Engine", "fmt": {"bix": 64, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Drive motor rotor temperature"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "4001"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AC_REFRIGERANT_P", "path": "Engine", "fmt": { "len": 8, "max": 127, "div": 2, "unit": "bars" }, "name": "Air conditioning refrigerant pressure"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "4011"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EAC_HV_CURRENT", "path": "Engine", "fmt": { "len": 8, "max": 51, "div": 5, "unit": "amps" }, "name": "Electric A/C compressor HV current"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "4012"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EAC_HV_V_INPUT", "path": "Battery", "fmt": { "len": 8, "max": 1020, "mul": 4, "unit": "volts" }, "name": "Electric A/C compressor HV input voltage"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "4052"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_HEATER_DES_POWER", "path": "Battery", "fmt": {           "len": 16, "max": 1310700, "mul": 20, "unit": "scalar" }, "name": "Battery heater, desired power consumption"},
+    {"id": "PEUGEOT_BAT_HEATER_ACT_POWER", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 1310700, "mul": 20, "unit": "scalar" }, "name": "Battery heater, actual power consumption"},
+    {"id": "PEUGEOT_HV_BUS_V",             "path": "Battery", "fmt": {"bix": 32, "len": 16, "max": 65535,              "unit": "volts"  }, "name": "HV bus voltage"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "4053"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_BAT_HEATER_INLET_T",  "path": "Battery", "fmt": {          "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery heater inlet temperature"},
+    {"id": "PEUGEOT_BAT_HEATER_OUTLET_T", "path": "Battery", "fmt": {"bix": 8, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery heater outlet temperature"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "4055"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AIRHEATER_CURRENT",    "path": "Engine",  "fmt": {"bix": 8,  "len": 8,  "max": 63.75,             "div": 4,             "unit": "amps"    }, "name": "Air heater current"},
+    {"id": "PEUGEOT_AIRHEATER_V",          "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 65535,                                   "unit": "volts"   }, "name": "Air heater voltage"},
+    {"id": "PEUGEOT_AIRHEATER_POWER_CONS", "path": "Engine",  "fmt": {"bix": 32, "len": 8,  "max": 255,                                     "unit": "scalar"  }, "name": "Air heater power consumption"},
+    {"id": "PEUGEOT_AIRHEATER_CORE_T",     "path": "Engine",  "fmt": {"bix": 48, "len": 8,  "max": 215,   "min": -40,           "add": -40, "unit": "celsius" }, "name": "Air heater core temperature"}
+  ]},
+{ "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "B562"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EMOTOR_HV_INPUT_V", "path": "Battery", "fmt": { "len": 16, "max": 1310, "div": 50, "unit": "volts" }, "name": "Drive motor HV input voltage"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A001"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_HVBAT_AH_1",  "path": "Battery", "fmt": {"bix": 24, "len": 24, "max": 1677721, "div": 10, "unit": "ampereHours"   }, "name": "HV battery lifetime amp-hours 1"},
+    {"id": "PEUGEOT_HVBAT_AH_2",  "path": "Battery", "fmt": {"bix": 48, "len": 24, "max": 1677721, "div": 10, "unit": "ampereHours"   }, "name": "HV battery lifetime amp-hours 2"},
+    {"id": "PEUGEOT_HVBAT_KWH_1", "path": "Battery", "fmt": {"bix": 72, "len": 24, "max": 1677721, "div": 10, "unit": "kilowattHours" }, "name": "HV battery lifetime energy 1"},
+    {"id": "PEUGEOT_HVBAT_KWH_2", "path": "Battery", "fmt": {"bix": 96, "len": 24, "max": 1677721, "div": 10, "unit": "kilowattHours" }, "name": "HV battery lifetime energy 2"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A009"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_MAX_V_CELL_NUMBER", "path": "Battery", "fmt": {           "len": 8,  "max": 255,                                 "unit": "scalar"     }, "name": "Highest voltage cell number"},
+    {"id": "PEUGEOT_MIN_V_CELL_NUMBER", "path": "Battery", "fmt": {"bix": 8,  "len": 8,  "max": 255,                                 "unit": "scalar"     }, "name": "Lowest voltage cell number"},
+    {"id": "PEUGEOT_MAX_CELL_V",        "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 65535,                               "unit": "millivolts" }, "name": "Highest cell voltage"},
+    {"id": "PEUGEOT_MIN_CELL_V",        "path": "Battery", "fmt": {"bix": 32, "len": 16, "max": 65535,                               "unit": "millivolts" }, "name": "Lowest cell voltage"},
+    {"id": "PEUGEOT_MAX_CELL_T",        "path": "Battery", "fmt": {"bix": 64, "len": 16, "max": 32767, "min": -32768, "add": -32768, "unit": "celsius"    }, "name": "Highest battery temperature"},
+    {"id": "PEUGEOT_MIN_CELL_T",        "path": "Battery", "fmt": {"bix": 80, "len": 16, "max": 32767, "min": -32768, "add": -32768, "unit": "celsius"    }, "name": "Lowest battery temperature"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A00A"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_HVBAT_CURRENT", "path": "Battery", "fmt": { "len": 16, "max": 1638, "min": -1638, "div": 20, "add": -1638.4, "unit": "amps" }, "name": "HV battery current", "suggestedMetric": "tractionBatteryCurrent"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A010"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_MIN_CELL_ST_CHG",    "path": "Battery", "fmt": {           "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Lowest cell state of charge"},
+    {"id": "PEUGEOT_MAX_CELL_ST_CHG",    "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Highest cell state of charge"},
+    {"id": "PEUGEOT_HVBAT_ST_CHG_EST_1", "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "HV battery state of charge, estimate 1"},
+    {"id": "PEUGEOT_HVBAT_ST_CHG",       "path": "Battery", "fmt": {"bix": 24, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "HV battery state of charge",             "suggestedMetric": "stateOfCharge"},
+    {"id": "PEUGEOT_HVBAT_ST_CHG_EST_3", "path": "Battery", "fmt": {"bix": 32, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "HV battery state of charge, estimate 3"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A011"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_BAT_V_CELL_SUM",   "path": "Battery", "fmt": {            "len": 16, "max": 6553, "div": 10, "unit": "volts" }, "name": "Battery voltage, cell sum",   "suggestedMetric": "tractionBatteryVoltage"},
+    {"id": "PEUGEOT_BAT_V_MODULE_SUM", "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 6553, "div": 10, "unit": "volts" }, "name": "Battery voltage, module sum"},
+    {"id": "PEUGEOT_BAT_PACK_LINK_V",  "path": "Battery", "fmt": {"bix": 176, "len": 16, "max": 6553, "div": 10, "unit": "volts" }, "name": "Battery pack link voltage"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A021"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_BAT_COOLING_INLET_T",  "path": "Battery", "fmt": {           "len": 16, "max": 32767, "min": -32768, "add": -32768, "unit": "celsius" }, "name": "Battery coolant inlet temperature"},
+    {"id": "PEUGEOT_BAT_COOLING_OUTLET_T", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 32767, "min": -32768, "add": -32768, "unit": "celsius" }, "name": "Battery coolant outlet temperature"},
+    {"id": "PEUGEOT_BAT_T_3",              "path": "Battery", "fmt": {"bix": 32, "len": 16, "max": 32767, "min": -32768, "add": -32768, "unit": "celsius" }, "name": "Battery temperature 3"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A029"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_HVBAT_SOH",         "path": "Battery", "fmt": {           "len": 16, "max": 100,  "div": 655.35, "unit": "percent"     }, "name": "HV battery state of health",  "suggestedMetric": "stateOfHealth"},
+    {"id": "PEUGEOT_HVBAT_CAP_NOMINAL", "path": "Battery", "fmt": {"bix": 24, "len": 16, "max": 6553, "div": 10,     "unit": "ampereHours" }, "name": "HV battery nominal capacity"},
+    {"id": "PEUGEOT_HVBAT_CAP",         "path": "Battery", "fmt": {"bix": 40, "len": 16, "max": 6553, "div": 10,     "unit": "ampereHours" }, "name": "HV battery current capacity"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A042"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AUX_BAT_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "12V battery voltage", "suggestedMetric": "starterBatteryVoltage"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A070"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_DIST_SINCE_CHG_1", "path": "Battery", "fmt": {"bix": 24, "len": 16, "max": 10546, "mul": 0.160935, "unit": "kilometers" }, "name": "Distance since last charge events 1"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A071"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_DIST_SINCE_CHG_2", "path": "Battery", "fmt": {"bix": 24, "len": 16, "max": 10546, "mul": 0.160935, "unit": "kilometers" }, "name": "Distance since last charge events 2"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A100"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_01_V", "path": "Battery", "fmt": {            "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 01 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_02_V", "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 02 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_03_V", "path": "Battery", "fmt": {"bix": 32,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 03 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_04_V", "path": "Battery", "fmt": {"bix": 48,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 04 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_05_V", "path": "Battery", "fmt": {"bix": 64,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 05 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_06_V", "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 06 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_07_V", "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 07 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_08_V", "path": "Battery", "fmt": {"bix": 112, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 08 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_09_V", "path": "Battery", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 09 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_10_V", "path": "Battery", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 10 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_11_V", "path": "Battery", "fmt": {"bix": 160, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 11 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_12_V", "path": "Battery", "fmt": {"bix": 176, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 12 voltage"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A101"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_13_V", "path": "Battery", "fmt": {            "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 13 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_14_V", "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 14 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_15_V", "path": "Battery", "fmt": {"bix": 32,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 15 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_16_V", "path": "Battery", "fmt": {"bix": 48,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 16 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_17_V", "path": "Battery", "fmt": {"bix": 64,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 17 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_18_V", "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 18 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_19_V", "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 19 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_20_V", "path": "Battery", "fmt": {"bix": 112, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 20 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_21_V", "path": "Battery", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 21 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_22_V", "path": "Battery", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 22 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_23_V", "path": "Battery", "fmt": {"bix": 160, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 23 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_24_V", "path": "Battery", "fmt": {"bix": 176, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 24 voltage"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A102"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_25_V", "path": "Battery", "fmt": {            "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 25 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_26_V", "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 26 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_27_V", "path": "Battery", "fmt": {"bix": 32,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 27 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_28_V", "path": "Battery", "fmt": {"bix": 48,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 28 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_29_V", "path": "Battery", "fmt": {"bix": 64,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 29 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_30_V", "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 30 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_31_V", "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 31 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_32_V", "path": "Battery", "fmt": {"bix": 112, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 32 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_33_V", "path": "Battery", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 33 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_34_V", "path": "Battery", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 34 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_35_V", "path": "Battery", "fmt": {"bix": 160, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 35 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_36_V", "path": "Battery", "fmt": {"bix": 176, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 36 voltage"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A103"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_37_V", "path": "Battery", "fmt": {            "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 37 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_38_V", "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 38 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_39_V", "path": "Battery", "fmt": {"bix": 32,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 39 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_40_V", "path": "Battery", "fmt": {"bix": 48,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 40 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_41_V", "path": "Battery", "fmt": {"bix": 64,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 41 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_42_V", "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 42 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_43_V", "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 43 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_44_V", "path": "Battery", "fmt": {"bix": 112, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 44 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_45_V", "path": "Battery", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 45 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_46_V", "path": "Battery", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 46 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_47_V", "path": "Battery", "fmt": {"bix": 160, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 47 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_48_V", "path": "Battery", "fmt": {"bix": 176, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 48 voltage"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A104"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_49_V", "path": "Battery", "fmt": {            "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 49 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_50_V", "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 50 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_51_V", "path": "Battery", "fmt": {"bix": 32,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 51 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_52_V", "path": "Battery", "fmt": {"bix": 48,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 52 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_53_V", "path": "Battery", "fmt": {"bix": 64,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 53 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_54_V", "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 54 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_55_V", "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 55 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_56_V", "path": "Battery", "fmt": {"bix": 112, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 56 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_57_V", "path": "Battery", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 57 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_58_V", "path": "Battery", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 58 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_59_V", "path": "Battery", "fmt": {"bix": 160, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 59 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_60_V", "path": "Battery", "fmt": {"bix": 176, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 60 voltage"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A105"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_61_V", "path": "Battery", "fmt": {            "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 61 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_62_V", "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 62 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_63_V", "path": "Battery", "fmt": {"bix": 32,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 63 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_64_V", "path": "Battery", "fmt": {"bix": 48,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 64 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_65_V", "path": "Battery", "fmt": {"bix": 64,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 65 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_66_V", "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 66 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_67_V", "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 67 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_68_V", "path": "Battery", "fmt": {"bix": 112, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 68 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_69_V", "path": "Battery", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 69 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_70_V", "path": "Battery", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 70 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_71_V", "path": "Battery", "fmt": {"bix": 160, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 71 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_72_V", "path": "Battery", "fmt": {"bix": 176, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 72 voltage"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A106"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_73_V", "path": "Battery", "fmt": {            "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 73 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_74_V", "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 74 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_75_V", "path": "Battery", "fmt": {"bix": 32,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 75 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_76_V", "path": "Battery", "fmt": {"bix": 48,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 76 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_77_V", "path": "Battery", "fmt": {"bix": 64,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 77 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_78_V", "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 78 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_79_V", "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 79 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_80_V", "path": "Battery", "fmt": {"bix": 112, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 80 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_81_V", "path": "Battery", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 81 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_82_V", "path": "Battery", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 82 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_83_V", "path": "Battery", "fmt": {"bix": 160, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 83 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_84_V", "path": "Battery", "fmt": {"bix": 176, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 84 voltage"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A107"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_85_V", "path": "Battery", "fmt": {            "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 85 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_86_V", "path": "Battery", "fmt": {"bix": 16,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 86 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_87_V", "path": "Battery", "fmt": {"bix": 32,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 87 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_88_V", "path": "Battery", "fmt": {"bix": 48,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 88 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_89_V", "path": "Battery", "fmt": {"bix": 64,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 89 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_90_V", "path": "Battery", "fmt": {"bix": 80,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 90 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_91_V", "path": "Battery", "fmt": {"bix": 96,  "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 91 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_92_V", "path": "Battery", "fmt": {"bix": 112, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 92 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_93_V", "path": "Battery", "fmt": {"bix": 128, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 93 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_94_V", "path": "Battery", "fmt": {"bix": 144, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 94 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_95_V", "path": "Battery", "fmt": {"bix": 160, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 95 voltage"},
+    {"id": "PEUGEOT_BAT_CELL_96_V", "path": "Battery", "fmt": {"bix": 176, "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Battery cell 96 voltage"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "A200"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_1",  "path": "Battery", "fmt": {            "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 1"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_2",  "path": "Battery", "fmt": {"bix": 8,   "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 2"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_3",  "path": "Battery", "fmt": {"bix": 16,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 3"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_4",  "path": "Battery", "fmt": {"bix": 24,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 4"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_5",  "path": "Battery", "fmt": {"bix": 32,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 5"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_6",  "path": "Battery", "fmt": {"bix": 40,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 6"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_7",  "path": "Battery", "fmt": {"bix": 48,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 7"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_8",  "path": "Battery", "fmt": {"bix": 56,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 8"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_9",  "path": "Battery", "fmt": {"bix": 64,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 9"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_10", "path": "Battery", "fmt": {"bix": 72,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 10"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_11", "path": "Battery", "fmt": {"bix": 80,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 11"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_12", "path": "Battery", "fmt": {"bix": 88,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 12"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_13", "path": "Battery", "fmt": {"bix": 96,  "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 13"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_14", "path": "Battery", "fmt": {"bix": 104, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 14"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_15", "path": "Battery", "fmt": {"bix": 112, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 15"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_16", "path": "Battery", "fmt": {"bix": 120, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 16"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_17", "path": "Battery", "fmt": {"bix": 128, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 17"},
+    {"id": "PEUGEOT_BAT_MODULE_T_SENS_18", "path": "Battery", "fmt": {"bix": 136, "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery module temperature sensor 18"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "B004"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_01_ST_CHG", "path": "Battery", "fmt": {           "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 01 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_02_ST_CHG", "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 02 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_03_ST_CHG", "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 03 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_04_ST_CHG", "path": "Battery", "fmt": {"bix": 24, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 04 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_05_ST_CHG", "path": "Battery", "fmt": {"bix": 32, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 05 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_06_ST_CHG", "path": "Battery", "fmt": {"bix": 40, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 06 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_07_ST_CHG", "path": "Battery", "fmt": {"bix": 48, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 07 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_08_ST_CHG", "path": "Battery", "fmt": {"bix": 56, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 08 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_09_ST_CHG", "path": "Battery", "fmt": {"bix": 64, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 09 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_10_ST_CHG", "path": "Battery", "fmt": {"bix": 72, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 10 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_11_ST_CHG", "path": "Battery", "fmt": {"bix": 80, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 11 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_12_ST_CHG", "path": "Battery", "fmt": {"bix": 88, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 12 state of charge"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "B005"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_13_ST_CHG", "path": "Battery", "fmt": {           "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 13 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_14_ST_CHG", "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 14 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_15_ST_CHG", "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 15 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_16_ST_CHG", "path": "Battery", "fmt": {"bix": 24, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 16 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_17_ST_CHG", "path": "Battery", "fmt": {"bix": 32, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 17 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_18_ST_CHG", "path": "Battery", "fmt": {"bix": 40, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 18 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_19_ST_CHG", "path": "Battery", "fmt": {"bix": 48, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 19 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_20_ST_CHG", "path": "Battery", "fmt": {"bix": 56, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 20 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_21_ST_CHG", "path": "Battery", "fmt": {"bix": 64, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 21 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_22_ST_CHG", "path": "Battery", "fmt": {"bix": 72, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 22 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_23_ST_CHG", "path": "Battery", "fmt": {"bix": 80, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 23 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_24_ST_CHG", "path": "Battery", "fmt": {"bix": 88, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 24 state of charge"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "B006"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_25_ST_CHG", "path": "Battery", "fmt": {           "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 25 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_26_ST_CHG", "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 26 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_27_ST_CHG", "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 27 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_28_ST_CHG", "path": "Battery", "fmt": {"bix": 24, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 28 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_29_ST_CHG", "path": "Battery", "fmt": {"bix": 32, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 29 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_30_ST_CHG", "path": "Battery", "fmt": {"bix": 40, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 30 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_31_ST_CHG", "path": "Battery", "fmt": {"bix": 48, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 31 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_32_ST_CHG", "path": "Battery", "fmt": {"bix": 56, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 32 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_33_ST_CHG", "path": "Battery", "fmt": {"bix": 64, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 33 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_34_ST_CHG", "path": "Battery", "fmt": {"bix": 72, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 34 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_35_ST_CHG", "path": "Battery", "fmt": {"bix": 80, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 35 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_36_ST_CHG", "path": "Battery", "fmt": {"bix": 88, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 36 state of charge"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "B007"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_37_ST_CHG", "path": "Battery", "fmt": {           "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 37 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_38_ST_CHG", "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 38 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_39_ST_CHG", "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 39 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_40_ST_CHG", "path": "Battery", "fmt": {"bix": 24, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 40 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_41_ST_CHG", "path": "Battery", "fmt": {"bix": 32, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 41 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_42_ST_CHG", "path": "Battery", "fmt": {"bix": 40, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 42 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_43_ST_CHG", "path": "Battery", "fmt": {"bix": 48, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 43 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_44_ST_CHG", "path": "Battery", "fmt": {"bix": 56, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 44 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_45_ST_CHG", "path": "Battery", "fmt": {"bix": 64, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 45 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_46_ST_CHG", "path": "Battery", "fmt": {"bix": 72, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 46 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_47_ST_CHG", "path": "Battery", "fmt": {"bix": 80, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 47 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_48_ST_CHG", "path": "Battery", "fmt": {"bix": 88, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 48 state of charge"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "B008"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_49_ST_CHG", "path": "Battery", "fmt": {           "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 49 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_50_ST_CHG", "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 50 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_51_ST_CHG", "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 51 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_52_ST_CHG", "path": "Battery", "fmt": {"bix": 24, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 52 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_53_ST_CHG", "path": "Battery", "fmt": {"bix": 32, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 53 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_54_ST_CHG", "path": "Battery", "fmt": {"bix": 40, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 54 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_55_ST_CHG", "path": "Battery", "fmt": {"bix": 48, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 55 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_56_ST_CHG", "path": "Battery", "fmt": {"bix": 56, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 56 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_57_ST_CHG", "path": "Battery", "fmt": {"bix": 64, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 57 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_58_ST_CHG", "path": "Battery", "fmt": {"bix": 72, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 58 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_59_ST_CHG", "path": "Battery", "fmt": {"bix": 80, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 59 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_60_ST_CHG", "path": "Battery", "fmt": {"bix": 88, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 60 state of charge"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "B009"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_61_ST_CHG", "path": "Battery", "fmt": {           "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 61 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_62_ST_CHG", "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 62 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_63_ST_CHG", "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 63 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_64_ST_CHG", "path": "Battery", "fmt": {"bix": 24, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 64 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_65_ST_CHG", "path": "Battery", "fmt": {"bix": 32, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 65 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_66_ST_CHG", "path": "Battery", "fmt": {"bix": 40, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 66 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_67_ST_CHG", "path": "Battery", "fmt": {"bix": 48, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 67 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_68_ST_CHG", "path": "Battery", "fmt": {"bix": 56, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 68 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_69_ST_CHG", "path": "Battery", "fmt": {"bix": 64, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 69 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_70_ST_CHG", "path": "Battery", "fmt": {"bix": 72, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 70 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_71_ST_CHG", "path": "Battery", "fmt": {"bix": 80, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 71 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_72_ST_CHG", "path": "Battery", "fmt": {"bix": 88, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 72 state of charge"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "B00A"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_73_ST_CHG", "path": "Battery", "fmt": {           "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 73 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_74_ST_CHG", "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 74 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_75_ST_CHG", "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 75 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_76_ST_CHG", "path": "Battery", "fmt": {"bix": 24, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 76 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_77_ST_CHG", "path": "Battery", "fmt": {"bix": 32, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 77 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_78_ST_CHG", "path": "Battery", "fmt": {"bix": 40, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 78 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_79_ST_CHG", "path": "Battery", "fmt": {"bix": 48, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 79 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_80_ST_CHG", "path": "Battery", "fmt": {"bix": 56, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 80 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_81_ST_CHG", "path": "Battery", "fmt": {"bix": 64, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 81 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_82_ST_CHG", "path": "Battery", "fmt": {"bix": 72, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 82 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_83_ST_CHG", "path": "Battery", "fmt": {"bix": 80, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 83 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_84_ST_CHG", "path": "Battery", "fmt": {"bix": 88, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 84 state of charge"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "B00B"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_85_ST_CHG", "path": "Battery", "fmt": {           "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 85 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_86_ST_CHG", "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 86 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_87_ST_CHG", "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 87 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_88_ST_CHG", "path": "Battery", "fmt": {"bix": 24, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 88 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_89_ST_CHG", "path": "Battery", "fmt": {"bix": 32, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 89 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_90_ST_CHG", "path": "Battery", "fmt": {"bix": 40, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 90 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_91_ST_CHG", "path": "Battery", "fmt": {"bix": 48, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 91 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_92_ST_CHG", "path": "Battery", "fmt": {"bix": 56, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 92 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_93_ST_CHG", "path": "Battery", "fmt": {"bix": 64, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 93 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_94_ST_CHG", "path": "Battery", "fmt": {"bix": 72, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 94 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_95_ST_CHG", "path": "Battery", "fmt": {"bix": 80, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 95 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_96_ST_CHG", "path": "Battery", "fmt": {"bix": 88, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 96 state of charge"}
+  ]},
+{ "hdr": "DA44", "rax": "44", "dbg": true, "cmd": {"22": "B00C"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_CELL_97_ST_CHG",  "path": "Battery", "fmt": {           "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 97 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_98_ST_CHG",  "path": "Battery", "fmt": {"bix": 8,  "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 98 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_99_ST_CHG",  "path": "Battery", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 99 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_100_ST_CHG", "path": "Battery", "fmt": {"bix": 24, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 100 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_101_ST_CHG", "path": "Battery", "fmt": {"bix": 32, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 101 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_102_ST_CHG", "path": "Battery", "fmt": {"bix": 40, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 102 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_103_ST_CHG", "path": "Battery", "fmt": {"bix": 48, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 103 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_104_ST_CHG", "path": "Battery", "fmt": {"bix": 56, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 104 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_105_ST_CHG", "path": "Battery", "fmt": {"bix": 64, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 105 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_106_ST_CHG", "path": "Battery", "fmt": {"bix": 72, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 106 state of charge"},
+    {"id": "PEUGEOT_BAT_CELL_107_ST_CHG", "path": "Battery", "fmt": {"bix": 80, "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Battery cell 107 state of charge"}
   ]},
 { "hdr": "DAC7", "rax": "C7", "dbg": true, "cmd": {"22": "0123"}, "freq": 86400,
   "signals": [
