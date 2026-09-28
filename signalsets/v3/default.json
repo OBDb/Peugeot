@@ -139,7 +139,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "017A"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_SOOT_MASS_FLOW_EXH", "path": "Engine", "fmt": {"bix": 192, "len": 32, "max": 21474836.4699999988, "min": -21474836.4800000004, "div": 100, "sign": true, "unit": "unknown" }, "name": "Soot mass flow in exhaust gas after combustion"}
+    {"id": "PEUGEOT_SOOT_MASS_FLOW_EXH", "path": "Engine", "fmt": {"bix": 192, "len": 32, "max": 21474836, "min": -21474836, "div": 100, "sign": true, "unit": "unknown" }, "name": "Soot mass flow in exhaust gas after combustion"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "017B"}, "freq": 1,
   "signals": [
@@ -187,19 +187,19 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0234"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_INJ_WIDTH_CYL_1", "path": "Engine", "fmt": { "len": 32, "max": 4294967.2949999999, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 1"}
+    {"id": "PEUGEOT_INJ_WIDTH_CYL_1", "path": "Engine", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 1"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0235"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_INJ_WIDTH_CYL_2", "path": "Engine", "fmt": { "len": 32, "max": 4294967.2949999999, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 2"}
+    {"id": "PEUGEOT_INJ_WIDTH_CYL_2", "path": "Engine", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 2"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0236"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_INJ_WIDTH_CYL_3", "path": "Engine", "fmt": { "len": 32, "max": 4294967.2949999999, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 3"}
+    {"id": "PEUGEOT_INJ_WIDTH_CYL_3", "path": "Engine", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 3"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0237"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_INJ_WIDTH_CYL_4", "path": "Engine", "fmt": { "len": 32, "max": 4294967.2949999999, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 4"}
+    {"id": "PEUGEOT_INJ_WIDTH_CYL_4", "path": "Engine", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "milliseconds" }, "name": "Injector pulse width, cylinder 4"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0255"}, "freq": 1,
   "signals": [
@@ -243,7 +243,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "03BC"}, "freq": 30,
   "signals": [
-    {"id": "PEUGEOT_ODO_03BC", "path": "Trips", "fmt": { "len": 32, "max": 4294967.2949999999, "div": 1000, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+    {"id": "PEUGEOT_ODO_03BC", "path": "Trips", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "043B"}, "freq": 5,
   "signals": [
@@ -412,7 +412,7 @@
 { "hdr": "7E1", "rax": "7E9", "fcm1": true, "dbg": true, "cmd": {"21": "18"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_ATF_T_3RDGEN", "path": "Engine",       "fmt": { "len": 16, "max": 983.984375, "min": -40, "div": 64, "add": -40, "unit": "fahrenheit" }, "name": "Automatic transmission fluid temperature"},
-    {"id": "PEUGEOT_ATF_T_2118",   "path": "Transmission", "fmt": { "len": 16, "max": 983.984375, "min": -40, "div": 64, "add": -40, "unit": "fahrenheit" }, "name": "Transmission fluid temperature",           "suggestedMetric": "transmissionFluidTemperature"}
+    {"id": "PEUGEOT_ATF_T_2118",   "path": "Transmission", "fmt": { "len": 16, "max": 983,        "min": -40, "div": 64, "add": -40, "unit": "fahrenheit" }, "name": "Transmission fluid temperature",           "suggestedMetric": "transmissionFluidTemperature"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "30"}, "freq": 5,
   "signals": [
