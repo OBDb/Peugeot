@@ -13,7 +13,7 @@ permissions:
 
 # Make prefixes for this repo
 env:
-  FILTER_ARGS: --filter-prefix=Peugeot- --filter-prefix=Jeep- --filter-prefix=Dodge- --filter-prefix=Chrysler- --filter-prefix=Ram- --filter-prefix=VuaxhallOpel- --filter-prefix=Citroen- --filter-prefix=AlfaRomeo- --filter-prefix=Fiat- --filter-prefix=Maserati- --filter-prefix=DS-
+  FILTER_ARGS: --filter-prefix=Peugeot- --filter-prefix=Jeep- --filter-prefix=Dodge- --filter-prefix=Chrysler- --filter-prefix=Ram- --filter-prefix=VauxhallOpel- --filter-prefix=Citroen- --filter-prefix=AlfaRomeo- --filter-prefix=Fiat- --filter-prefix=Maserati- --filter-prefix=DS-
   SIGNAL_PREFIX: PEUGEOT
 
 concurrency:
