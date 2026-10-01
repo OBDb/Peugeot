@@ -3,7 +3,8 @@
     { "hdr": "7E1",  "type": "transmission" },
     { "hdr": "DA10", "type": "engine" },
     { "hdr": "DA18", "type": "transmission" },
-    { "hdr": "DA40", "type": "bodyControl" }
+    { "hdr": "DA40", "type": "bodyControl" },
+    { "hdr": "DAC7", "type": "tpms" }
   ],
   "commands": [
 { "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D402"}, "freq": 1,
@@ -242,9 +243,21 @@
   "signals": [
     {"id": "PEUGEOT_MILEAGE_SINCE_OIL", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Mileage since last oil change"}
   ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D445"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_DES_HIGH_P_COMMON_P", "path": "Fuel", "fmt": { "len": 16, "max": 65535, "unit": "bars" }, "name": "Desired high pressure common rail fuel pressure"}
+  ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D446"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_HIGH_FUEL_P_MEAS", "path": "Fuel", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "bars" }, "name": "High fuel pressure measured"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D460"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AIR_METERING_VLV_TGT", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Air metering valve, target position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D461"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AIR_METERING_VLV", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Air metering valve duty cycle"}
   ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D462"}, "freq": 0.25,
   "signals": [
@@ -346,6 +359,10 @@
   "signals": [
     {"id": "PEUGEOT_ODO_6A8", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Total mileage", "suggestedMetric": "odometer"}
   ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4A0"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CONTROLLED_AIR_SUP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Controlled air supply module"}
+  ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4A5"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_ALTERNATOR_LOAD", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Alternator load value"}
@@ -414,6 +431,10 @@
   "signals": [
     {"id": "PEUGEOT_TURBOCHARGER_POS", "path": "Battery", "fmt": { "len": 16, "max": 655, "div": 100.0000022352, "unit": "percent" }, "name": "Turbocharger position information"}
   ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4EB"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_MOVEMENT_CONTROLLED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Movement of controlled air supply module"}
+  ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4EC"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_APPROXIMATE_POS", "path": "Battery", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "percent" }, "name": "Approximate position of turbocharger actuator"}
@@ -422,9 +443,132 @@
   "signals": [
     {"id": "PEUGEOT_LOW_P_FUEL_PMP_STAT", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Low pressure fuel pump status"}
   ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D500"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_INJ_CODE_1", "path": "Engine", "fmt": {"bix": 8,   "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 1"},
+    {"id": "PEUGEOT_INJ_CODE_2", "path": "Engine", "fmt": {"bix": 72,  "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 2"},
+    {"id": "PEUGEOT_INJ_CODE_3", "path": "Engine", "fmt": {"bix": 136, "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 3"},
+    {"id": "PEUGEOT_INJ_CODE_4", "path": "Engine", "fmt": {"bix": 200, "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 4"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D509"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EGR_VLV_POS", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D50C"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_PREHEATING_RELAY", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Preheating relay control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D50D"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_STAT_PRE_POST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Glow plug relay status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D50E"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_PREHEATING_V", "path": "Battery", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "volts" }, "name": "Glow plug unit supply voltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D50F"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_PREHEATING_T", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "celsius" }, "name": "Glow plug plug set temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D510"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EGR_VLV_SET_POS", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve set position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D511"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EGR_VLV_CTRL_SIG_RCO", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve duty cycle"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D513"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_VEH_MILEAGE", "path": "Engine", "fmt": { "len": 8, "max": 12750, "mul": 50, "unit": "kilometers" }, "name": "Vehicle mileage remaining before filling the tank with urea solution"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D514"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_P_BASED_INJ", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Pressure-based injection permission for urea solution"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D515"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_UREA_SOLUTION_INJ_ON_T", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Urea solution injection permission based on temperature value"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D517"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_REMAINING_UREA", "path": "Engine", "fmt": { "len": 16, "max": 63999, "mul": 125, "div": 128, "unit": "unknown" }, "name": "Remaining urea solution in the urea tank"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D518"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_DPF_DIFF_P_SENS_SIG", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "unknown" }, "name": "Diesel particulate filter differential pressure sensor signal deviation from reference value"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D519"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_DIST_TRAVELED_SINCE", "path": "Trips", "fmt": { "len": 16, "blsb": true, "max": 4095, "div": 16, "unit": "kilometers" }, "name": "Distance traveled since the last regeneration"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D51E"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_UREA_TANK_HEATING_CURRENT", "path": "Engine", "fmt": { "len": 16, "max": 399, "div": 163.8399875, "unit": "percent" }, "name": "Urea tank heating current, percentage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D51F"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EVALUATION_DEGREE", "path": "Engine", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "percent" }, "name": "Evaluation of the degree of dilution of motor oil"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D520"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_PF_DIFF_P", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "unknown" }, "name": "Particulate filter differential pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D521"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_DPF_REGEN_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Diesel particulate filter regeneration status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D523"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EVALUATION_CARBON", "path": "Engine", "fmt": { "len": 8, "max": 7.96, "div": 32, "unit": "percent" }, "name": "Evaluation of carbon content in engine oil"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D524"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ENG_OIL_DILUTION", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine oil dilution protection status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D525"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AVG_MILEAGE_LAST_10", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 4095, "div": 16, "unit": "kilometers" }, "name": "Average mileage for the last 10 regenerations"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D526"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_TOT_MASS_ADDITIVE", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 511, "div": 128, "unit": "gravity" }, "name": "Total mass of additive accumulated in the diesel particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D527"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_TOT_MASS_ADDITIVE_ACCUMULATED_DPF", "path": "Engine", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "gravity" }, "name": "Total mass of additive accumulated in the diesel particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D528"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_REGEN_ENABLE", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Regeneration enable"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D52C"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_WATER_DIESEL", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Water in diesel"}
+  ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D52E"}, "freq": 5,
   "signals": [
     {"id": "PEUGEOT_EXH_GAS_T_BEFORE_PRE", "path": "Transmission", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Exhaust gas temperature before upstream catalytic converter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D52F"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_SOOT_CLOGGING_LEVEL", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 6399, "div": 10.24, "unit": "percent" }, "name": "Soot clogging level of diesel particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D530"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_MILEAGE_REMAINING", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 524272, "min": -524288, "mul": 16, "sign": true, "unit": "kilometers" }, "name": "Mileage remaining before diesel particulate filter replacement"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D531"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_MILEAGE_SINCE_DPF", "path": "Engine", "fmt": { "len": 16, "max": 524280, "mul": 8, "unit": "kilometers" }, "name": "Mileage since last diesel particulate filter replacement"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D532"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ASSESSMENT_THERMAL", "path": "Engine", "fmt": { "len": 16, "max": 12799, "mul": 25, "div": 128, "unit": "percent" }, "name": "Assessment of thermal aging of the particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D533"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EXH_GAS_FLOW_THROUGH", "path": "Engine", "fmt": { "len": 16, "max": 14399782, "mul": 219.7265930176, "unit": "liters" }, "name": "Exhaust gas flow through the particulate filter"}
   ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D534"}, "freq": 1,
   "signals": [
@@ -434,9 +578,109 @@
   "signals": [
     {"id": "PEUGEOT_DIST_NEXT_OIL_CHANGE", "path": "Trips", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Distance to next oil change"}
   ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53A"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EGR_VLV_FIRST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Exhaust gas recirculation valve first electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53B"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AIR_DOSER_FIRST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Air doser first electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53C"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_POWER_SPENT_ON", "path": "Engine", "fmt": { "len": 16, "max": 399, "div": 163.8399875, "unit": "percent" }, "name": "Power spent on heating the urea injection system pipes, percentage ratio"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53D"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_NOX_CONTENT_AFTER", "path": "Transmission", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "scalar" }, "name": "Nitrogen oxide content after catalytic converter, ppm"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53E"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_UREA_SOLUTION_P", "path": "Engine", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "bars" }, "name": "Urea solution pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53F"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CALC_NOX_CONTENT", "path": "Transmission", "fmt": { "len": 32, "max": 4194303, "div": 1024, "unit": "unknown" }, "name": "Calculated nox content at the inlet of the nox catalytic converter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D540"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_NOX_SYSTEM_OP_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Nox system operating status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D541"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EVALUATION_THERMAL", "path": "Transmission", "fmt": { "len": 16, "max": 99.99, "div": 655.35995, "unit": "percent" }, "name": "Evaluation of the thermal aging of the NOx catalytic converter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D542"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EVALUATION_EXH_GAS", "path": "Engine", "fmt": { "len": 32, "max": 214748364700, "min": -214748364800, "mul": 100, "sign": true, "unit": "liters" }, "name": "Evaluation of the exhaust gas flow using the nox sensor"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D543"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_T_NOX_CATALYTIC_CONV", "path": "Transmission", "fmt": { "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "celsius" }, "name": "Temperature of the nox catalytic converter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D544"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EXH_GAS_P_OUTLET_PF", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 32.76, "min": -32.76, "div": 999.9999525026, "sign": true, "unit": "bars" }, "name": "Exhaust gas pressure at the outlet of the particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D545"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_NOX_CONTENT_MEAS", "path": "Transmission", "fmt": { "len": 16, "blsb": true, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "scalar" }, "name": "Nitrogen oxide content measured at the inlet of the catalytic converter, ppm"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D546"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CYL_1_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 1 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D547"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CYL_2_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 2 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D548"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CYL_3_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 3 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D549"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CYL_4_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 4 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54A"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_OPEN_LOOP_SOOT_LOAD", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 63.99, "div": 1024, "unit": "gramsPerLiter" }, "name": "Open loop soot load assessment of the diesel particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54B"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CLOSED_LOOP_SOOT", "path": "Engine", "fmt": { "len": 16, "max": 63.99, "div": 1024, "unit": "gramsPerLiter" }, "name": "Closed loop soot load assessment of the diesel particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54C"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_SHORT_TERM_REGEN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Short-term regeneration capability"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54D"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_LONG_TERM_REGEN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Long-term regeneration capability"}
+  ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54E"}, "freq": 5,
   "signals": [
     {"id": "PEUGEOT_AIR_T_AIR_FLOW_METER", "path": "Engine", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Air temperature by air flow meter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54F"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AIR_METERING_VLV_POS", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Air metering valve position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D550"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_SPEC_VOLUME_INJECTED", "path": "Engine", "fmt": { "len": 16, "max": 1023, "div": 64, "unit": "unknown" }, "name": "Specified volume of injected urea solution"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D552"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EGR_LOW_LIM", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Exhaust gas recirculation low limit electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D553"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EGR_HIGH_LIM", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Exhaust gas recirculation high limit electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D554"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_NOX_SENS_HEATING", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Nox sensor heating control"}
   ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D555"}, "freq": 5,
   "signals": [
@@ -450,25 +694,97 @@
   "signals": [
     {"id": "PEUGEOT_CAN_VEH_BE_EQUIPPED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Towing device configured"}
   ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D558"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_VOLUME_UREA_SOLUTION", "path": "Engine", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "liters" }, "name": "Volume of urea solution measured in urea tank"}
+  ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D559"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_PRE_CATALYTIC_CONV", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "percent" }, "name": "Upstream catalytic converter aging"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D55B"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_MIXTURE_ENRICHMENT_MEAS", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32768, "unit": "scalar" }, "name": "Mixture enrichment measured by nox sensor at outlet"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D55D"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_NOX_CATALYTIC_CONV", "path": "Transmission", "fmt": { "len": 16, "max": 65.53, "div": 999.9999525026, "unit": "gravity" }, "name": "Nox catalytic converter urea content"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D563"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CALC_FUEL_INJ_AMOUNT", "path": "Fuel", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "unknown" }, "name": "Calculated fuel injection amount"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D568"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_UREA_SOLUTION", "path": "Engine", "fmt": { "len": 16, "max": 1023, "div": 64, "unit": "unknown" }, "name": "Urea solution injected amount"}
   ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56A"}, "freq": 30,
   "signals": [
     {"id": "PEUGEOT_MIN_FLI", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Minimum fuel level"}
   ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56B"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_MASS_UREA_INJECTED", "path": "Engine", "fmt": { "len": 16, "max": 1310, "div": 50.0000011176, "unit": "gravity" }, "name": "Mass of urea injected for thermal protection of urea injector"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56C"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AMOUNT_FUEL_ADDITIVE", "path": "Fuel", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "unknown" }, "name": "Amount of fuel additive remaining in the additive tank"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56D"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_T_UREA_SOLUTION_UREA", "path": "Engine", "fmt": { "len": 8, "max": 127, "min": -128, "sign": true, "unit": "celsius" }, "name": "Temperature of the urea solution in the urea tank"}
+  ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56E"}, "freq": 0.25,
   "signals": [
     {"id": "PEUGEOT_PROPORTIONAL_CLU", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Proportional clutch pedal sensor"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56F"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_FIRST_FUEL_ADDITIVE", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "First fuel additive injection state"}
   ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D570"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_COMPOSITION_MIXTURE", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "The composition of the mixture is calculated by the oxygen sensor"}
   ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D571"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_MIXTURE_ENRICHMENT", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32768, "unit": "scalar" }, "name": "Mixture enrichment measured by nox sensor at inlet"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D572"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_NOX_SENS_SIG_STAT_INLET", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Nox sensor signal status at the inlet"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D573"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_NOX_SENS_SIG_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Nox sensor signal status at the outlet"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D576"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_NOX_CONTENT_MEAS_INLET_NOX", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "scalar" }, "name": "Nitrogen oxide content measured at the inlet of the catalytic converter, ppm"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D580"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_POWER_CONSUMED", "path": "Engine", "fmt": { "len": 16, "max": 655350, "mul": 10, "unit": "percent" }, "name": "Power consumed for heating the pipelines of the urea injection system"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D581"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_UREA_TANK_HEATING", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "percent" }, "name": "Urea tank heating current"}
+  ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D586"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_REQ_CONTROLLED", "path": "Engine", "fmt": { "len": 16, "max": 399, "min": -399, "div": 81.92000625, "sign": true, "unit": "percent" }, "name": "Requested value controlled thermostat"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D588"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_INJ_ANG_HIGH_P_FUEL", "path": "Fuel", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "scalar" }, "name": "Injection angle of the high-pressure fuel pump"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D58C"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_UREA_MASS_FRACTION", "path": "Engine", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "percent" }, "name": "Urea mass fraction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D58D"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_UREA_SOLUTION_TYPE", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Urea solution type in urea tank"}
   ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D700"}, "freq": 0.25,
   "signals": [
@@ -1560,7 +1876,8 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "2D"}, "freq": 5,
   "signals": [
-    {"id": "PEUGEOT_EOT_212D", "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 376, "min": -83, "mul": 9, "div": 5, "add": -83, "unit": "fahrenheit" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"}
+    {"id": "PEUGEOT_EOT_212D", "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 376, "min": -83, "mul": 9, "div": 5, "add": -83, "unit": "fahrenheit" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"},
+    {"id": "PEUGEOT_EOT_V2",   "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 191, "min": -64,                     "add": -64, "unit": "celsius"    }, "name": "Engine oil temperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "3A"}, "freq": 5,
   "signals": [
@@ -1652,13 +1969,17 @@
   "signals": [
     {"id": "PEUGEOT_BAROMETRIC_P", "path": "Engine", "fmt": { "len": 16, "max": 13107, "div": 5, "unit": "kilopascal" }, "name": "Barometric pressure"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "011D"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_ECT_V2", "path": "Engine", "fmt": { "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Engine coolant temperature"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0127"}, "freq": 5,
   "signals": [
     {"id": "PEUGEOT_AAT_V2", "path": "Engine", "fmt": { "len": 8, "max": 376, "min": -83, "mul": 9, "div": 5, "add": -83, "unit": "fahrenheit" }, "name": "Ambient temperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "012B"}, "freq": 5,
   "signals": [
-    {"id": "PEUGEOT_CAT_MODEL_T", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Catalyst modeled temperature"}
+    {"id": "PEUGEOT_CAT_MODEL_T", "path": "Engine", "fmt": { "len": 16, "max": 1000, "unit": "celsius" }, "name": "Catalyst modeled temperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0165"}, "freq": 1,
   "signals": [
@@ -1847,6 +2168,10 @@
   "signals": [
     {"id": "PEUGEOT_MDS_ACTIVE", "path": "Engine", "fmt": {"bix": 4, "len": 1, "max": 1, "unit": "offon" }, "name": "Multi-displacement system active"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "114B"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_ACCEL_PEDAL_POS_V3", "path": "Movement", "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Accelerator pedal position"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1247"}, "freq": 0.25,
   "signals": [
     {"id": "PEUGEOT_THROTTLE_INLET_P", "path": "Engine", "fmt": { "len": 16, "max": 409.5937, "div": 160, "unit": "kilopascal" }, "name": "Throttle inlet pressure"}
@@ -1910,6 +2235,10 @@
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1935"}, "freq": 5,
   "signals": [
     {"id": "PEUGEOT_INT_MANIFOLD_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 65495, "min": -40, "add": -40, "unit": "fahrenheit" }, "name": "Intake manifold air temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1997"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CMD_POWER", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Commanded power"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1D89"}, "freq": 1,
   "signals": [
@@ -2045,7 +2374,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0DA"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_EGR_VLV_POS", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve position"}
+    {"id": "PEUGEOT_EGR_VLV_POS_V2", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve position"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A0DC"}, "freq": 5,
   "signals": [
@@ -2199,7 +2528,7 @@
   ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1003"}, "freq": 5,
   "signals": [
-    {"id": "PEUGEOT_ECT_ECU", "path": "Engine", "fmt": { "len": 16, "max": 200, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "Coolant temperature", "suggestedMetric": "engineCoolantTemperature"}
+    {"id": "PEUGEOT_ECT_ECU", "path": "Engine", "fmt": { "len": 16, "max": 200, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "Coolant temperature"}
   ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1009"}, "freq": 3600,
   "signals": [
