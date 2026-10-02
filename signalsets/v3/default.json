@@ -1840,9 +1840,9 @@
   ]},
 { "hdr": "7AB", "rax": "52B", "fcm1": true, "dbg": true, "cmd": {"22": "2802"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_GPS_HEADING",      "path": "GPS", "fmt": {"bix": 152, "len": 16, "max": 65535, "unit": "degrees" }, "name": "Heading"},
-    {"id": "PEUGEOT_GPS_SATS_TRACKED", "path": "GPS", "fmt": {"bix": 200, "len": 4,  "max": 15,    "unit": "scalar"  }, "name": "Satellites, tracked"},
-    {"id": "PEUGEOT_GPS_SATS_VISIBLE", "path": "GPS", "fmt": {"bix": 204, "len": 4,  "max": 15,    "unit": "scalar"  }, "name": "Satellites, visible"}
+    {"id": "PEUGEOT_GPS_HEADING",      "path": "GPS", "fmt": {"bix": 152, "len": 16, "max": 360, "div": 10, "unit": "degrees" }, "name": "Heading"},
+    {"id": "PEUGEOT_GPS_SATS_TRACKED", "path": "GPS", "fmt": {"bix": 200, "len": 4,  "max": 15,             "unit": "scalar"  }, "name": "Satellites, tracked"},
+    {"id": "PEUGEOT_GPS_SATS_VISIBLE", "path": "GPS", "fmt": {"bix": 204, "len": 4,  "max": 15,             "unit": "scalar"  }, "name": "Satellites, visible"}
   ]},
 { "hdr": "7DA", "rax": "7E2", "din": "03", "dbg": true, "cmd": {"22": "A020"}, "freq": 15,
   "signals": [
@@ -2056,7 +2056,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0227"}, "freq": 30,
   "signals": [
-    {"id": "PEUGEOT_FLI_INPUT", "path": "Fuel", "fmt": { "len": 8, "max": 100, "unit": "percent" }, "name": "Fuel level input", "suggestedMetric": "fuelTankLevel"}
+    {"id": "PEUGEOT_FLI_INPUT", "path": "Fuel", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Fuel level input", "suggestedMetric": "fuelTankLevel"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "022A"}, "freq": 1,
   "signals": [
@@ -2322,7 +2322,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A00A"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_AFT_DPF_OULET_P_SENS", "path": "Engine", "fmt": { "len": 16, "max": 294, "mul": 9, "div": 2000, "unit": "psi" }, "name": "AFT DPF oulet pressure sensor"}
+    {"id": "PEUGEOT_AFT_DPF_OULET_P_SENS", "path": "Engine", "fmt": { "len": 16, "max": 294, "mul": 9, "div": 2000, "unit": "psi" }, "name": "Particulate filter outlet pressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "A043"}, "freq": 30,
   "signals": [
@@ -2572,8 +2572,8 @@
   ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "18E8"}, "freq": 5,
   "signals": [
-    {"id": "PEUGEOT_DPF_FLOW_RES",   "path": "Emissions", "fmt": { "len": 16, "max": 6.55, "div": 10000, "unit": "scalar" }, "name": "Particulate filter flow resistance"},
-    {"id": "PEUGEOT_DPF_FLOW_RES_2", "path": "Emissions", "fmt": { "len": 16, "max": 10,   "div": 10000, "unit": "scalar" }, "name": "DPF flow resistance"}
+    {"id": "PEUGEOT_DPF_FLOW_RES",   "path": "Emissions", "fmt": { "len": 16, "max": 6.55,   "div": 10000, "unit": "scalar" }, "name": "Particulate filter flow resistance"},
+    {"id": "PEUGEOT_DPF_FLOW_RES_2", "path": "Emissions", "fmt": { "len": 16, "max": 6.5535, "div": 10000, "unit": "scalar" }, "name": "Particulate filter flow resistance"}
   ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "18EC"}, "freq": 5,
   "signals": [
