@@ -1030,8 +1030,8 @@
   ]},
 { "hdr": "6A9", "rax": "689", "fcm1": true, "din": "03", "dbg": true, "cmd": {"21": "C3"}, "freq": 0.25,
   "signals": [
-    {"id": "PEUGEOT_ACCEL_PEDAL_POS_V2", "path": "Movement", "fmt": {"bix": 88,  "len": 8, "max": 99.45,              "mul": 39, "div": 100,              "unit": "percent"      }, "name": "Accelerator pedal position"},
-    {"id": "PEUGEOT_ENG_TQ",             "path": "Engine",   "fmt": {"bix": 112, "len": 8, "max": 410,   "min": -100, "mul": 2,              "add": -100, "unit": "newtonMeters" }, "name": "Engine torque"}
+    {"id": "PEUGEOT_ACCEL_PEDAL_POS_6A9", "path": "Movement", "fmt": {"bix": 88,  "len": 8, "max": 99.45,              "mul": 39, "div": 100,              "unit": "percent"      }, "name": "Accelerator pedal position"},
+    {"id": "PEUGEOT_ENG_TQ",              "path": "Engine",   "fmt": {"bix": 112, "len": 8, "max": 410,   "min": -100, "mul": 2,              "add": -100, "unit": "newtonMeters" }, "name": "Engine torque"}
   ]},
 { "hdr": "6A9", "rax": "689", "fcm1": true, "din": "03", "dbg": true, "cmd": {"21": "C5"}, "freq": 0.25,
   "signals": [
@@ -1043,7 +1043,7 @@
   ]},
 { "hdr": "6A9", "rax": "689", "fcm1": true, "din": "03", "dbg": true, "cmd": {"21": "C8"}, "freq": 0.25,
   "signals": [
-    {"id": "PEUGEOT_VSS_V2", "path": "Movement", "fmt": {"bix": 96, "len": 16, "max": 655, "div": 100, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+    {"id": "PEUGEOT_VSS_6A9", "path": "Movement", "fmt": {"bix": 96, "len": 16, "max": 655, "div": 100, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
   ]},
 { "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D405"}, "freq": 1,
   "signals": [
@@ -1075,7 +1075,7 @@
   ]},
 { "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D505"}, "freq": 0.25,
   "signals": [
-    {"id": "PEUGEOT_ACCEL_PEDAL_POS_6A9", "path": "Movement", "fmt": { "len": 8, "max": 127, "div": 2, "unit": "percent" }, "name": "Accelerator pedal position"}
+    {"id": "PEUGEOT_ACCEL_PEDAL_POS_6A9_6A9", "path": "Movement", "fmt": { "len": 8, "max": 127, "div": 2, "unit": "percent" }, "name": "Accelerator pedal position"}
   ]},
 { "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D506"}, "freq": 0.25,
   "signals": [
@@ -1387,7 +1387,7 @@
   ]},
 { "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D711"}, "freq": 0.25,
   "signals": [
-    {"id": "PEUGEOT_VSS_6A9", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+    {"id": "PEUGEOT_VSS_6A9_6A9", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
   ]},
 { "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D730"}, "freq": 1,
   "signals": [
@@ -2200,7 +2200,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "114B"}, "freq": 0.25,
   "signals": [
-    {"id": "PEUGEOT_ACCEL_PEDAL_POS_V3", "path": "Movement", "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Accelerator pedal position"}
+    {"id": "PEUGEOT_ACCEL_PEDAL_POS_V2", "path": "Movement", "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Accelerator pedal position"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1247"}, "freq": 0.25,
   "signals": [
@@ -2584,6 +2584,10 @@
   "signals": [
     {"id": "PEUGEOT_REGEN_INTERRUPTED", "path": "Emissions", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "DPF regen interrupted count"}
   ]},
+{ "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "18AE"}, "freq": 3600,
+  "signals": [
+    {"id": "PEUGEOT_REGEN_CONSEC_INTERRUPTED", "path": "Emissions", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Consecutive interrupted particulate filter regenerations"}
+  ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "18D0"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_MPROP_CMD", "path": "Engine", "fmt": { "len": 16, "max": 100, "div": 100, "unit": "percent" }, "name": "M-Prop injection command"}
@@ -2615,7 +2619,8 @@
   ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1900"}, "freq": 5,
   "signals": [
-    {"id": "PEUGEOT_FUEL_TEMP", "path": "Engine", "fmt": { "len": 16, "max": 200, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "Diesel fuel temperature"}
+    {"id": "PEUGEOT_FUEL_TEMP", "path": "Engine", "fmt": { "len": 16, "max": 200, "min": -40,  "mul": 2, "div": 100, "add": -40,               "unit": "celsius" }, "name": "Diesel fuel temperature"},
+    {"id": "PEUGEOT_FUEL_T_V2", "path": "Fuel",   "fmt": { "len": 16, "max": 615, "min": -695,           "div": 50,  "add": -40, "sign": true, "unit": "celsius" }, "name": "Fuel temperature"}
   ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "190B"}, "freq": 0.25,
   "signals": [
@@ -2625,9 +2630,17 @@
   "signals": [
     {"id": "PEUGEOT_GEAR_ECU", "path": "Transmission", "fmt": { "len": 8, "max": 9, "unit": "scalar" }, "name": "Gear engaged"}
   ]},
+{ "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"22": "192F"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_AC_P_V2", "path": "Engine", "fmt": { "len": 16, "max": 655350, "mul": 10, "unit": "unknown" }, "name": "Air conditioning pressure"}
+  ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "1935"}, "freq": 5,
   "signals": [
     {"id": "PEUGEOT_IAT_TURBO", "path": "Engine", "fmt": { "len": 16, "max": 200, "min": -40, "mul": 2, "div": 100, "add": -40, "unit": "celsius" }, "name": "IAT post-intercooler"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"22": "193A"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_TURBO_BOOST_ACTUATOR", "path": "Engine", "fmt": { "len": 8, "max": 99.22, "min": -100, "mul": 7813, "div": 10000, "sign": true, "unit": "percent" }, "name": "Turbo boost actuator duty"}
   ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "193F"}, "freq": 5,
   "signals": [
@@ -2641,6 +2654,10 @@
   "signals": [
     {"id": "PEUGEOT_RAIL_PRESS", "path": "Engine", "fmt": { "len": 16, "max": 3000, "div": 20, "unit": "bars" }, "name": "Fuel rail pressure measured"}
   ]},
+{ "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"22": "1948"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_FUEL_RAMP_P_ADC", "path": "Fuel", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "millivolts" }, "name": "Fuel ramp pressure ADC"}
+  ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "194F"}, "freq": 30,
   "signals": [
     {"id": "PEUGEOT_OIL_PUMP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Variable oil pump position"}
@@ -2649,9 +2666,29 @@
   "signals": [
     {"id": "PEUGEOT_BATT_V_ECU", "path": "Battery", "fmt": { "len": 16, "max": 20, "div": 2000, "unit": "volts" }, "name": "Battery voltage"}
   ]},
+{ "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"22": "1959"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_TURBO_BOOST_CMD", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "unknown" }, "name": "Turbo boost, commanded"}
+  ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "195A"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_BOOST", "path": "Engine", "fmt": { "len": 16, "max": 300, "min": -100, "div": 10, "add": -3276.8, "unit": "kilopascal" }, "name": "Turbo boost pressure"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"22": "195B"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_TURBO_BOOST_ADC", "path": "Engine", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "millivolts" }, "name": "Turbo boost ADC"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"22": "19BD"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BAT_ST_CHG", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Battery state of charge"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"22": "2001"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_ODO_DA10", "path": "Trips", "fmt": { "len": 24, "max": 1677721, "div": 10, "unit": "kilometers" }, "name": "Odometer"}
+  ]},
+{ "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"22": "2005"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_MAX_RPM_REACHED", "path": "Movement", "fmt": { "len": 8, "max": 5080, "min": -5120, "mul": 40, "sign": true, "unit": "celsius" }, "name": "Max RPM reached"}
   ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "3800"}, "freq": 2,
   "signals": [
