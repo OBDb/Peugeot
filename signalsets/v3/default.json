@@ -1869,6 +1869,10 @@
   "signals": [
     {"id": "PEUGEOT_ATF_T_V_2", "path": "Transmission", "fmt": { "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Transmission fluid temperature v.2"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "1A"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BOOST_P_ACT", "path": "Engine", "fmt": {"bix": 160, "len": 16, "max": 65535, "unit": "kilopascal" }, "name": "Boost pressure, actual"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "23"}, "freq": 5,
   "signals": [
     {"id": "PEUGEOT_AAT_7E0",  "path": "Engine",  "fmt": {           "len": 16, "max": 1023, "div": 64, "unit": "fahrenheit" }, "name": "Ambient air temperature"},
@@ -1878,6 +1882,10 @@
   "signals": [
     {"id": "PEUGEOT_EOT_212D", "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 376, "min": -83, "mul": 9, "div": 5, "add": -83, "unit": "fahrenheit" }, "name": "Engine oil temperature", "suggestedMetric": "engineOilTemperature"},
     {"id": "PEUGEOT_EOT_V2",   "path": "Engine", "fmt": {"bix": 56, "len": 8, "max": 191, "min": -64,                     "add": -64, "unit": "celsius"    }, "name": "Engine oil temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "38"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_ODO_7E0", "path": "Trips", "fmt": {"bix": 160, "len": 16, "max": 419424, "mul": 32, "div": 5, "unit": "kilometers" }, "name": "Odometer"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "3A"}, "freq": 5,
   "signals": [
@@ -1899,6 +1907,19 @@
     {"id": "PEUGEOT_SOOT_LOAD_BASED_ON_P", "path": "Engine", "fmt": {          "len": 8,  "max": 34.55, "div": 100, "add": 32, "unit": "unknown" }, "name": "Soot load based on delta pressure"},
     {"id": "PEUGEOT_ESITMATED_SOOT",       "path": "Engine", "fmt": {"bix": 8, "len": 16, "max": 65535,                        "unit": "seconds" }, "name": "Estimated soot removal time"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "62"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EOP_7E0", "path": "Engine", "fmt": {           "len": 16, "max": 65535,                                         "unit": "kilopascal" }, "name": "Engine oil pressure"},
+    {"id": "PEUGEOT_EOT_V3",  "path": "Engine", "fmt": {"bix": 56, "len": 16, "max": 6280,  "min": -273, "div": 10, "add": -273.14, "unit": "celsius"    }, "name": "Engine oil temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "63"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BOOST_P_CMD", "path": "Engine", "fmt": {"bix": 160, "len": 16, "max": 65535, "unit": "kilopascal" }, "name": "Boost pressure, commanded"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "7F"}, "freq": 30,
+  "signals": [
+    {"id": "PEUGEOT_ODO_LAST_REGEN", "path": "Trips", "fmt": {"bix": 96, "len": 32, "max": 4294967, "div": 1000, "unit": "kilometers" }, "name": "Odometer at last regeneration"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "A7"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_AC_HIGH_SIDE_P_7E0", "path": "Engine", "fmt": {"bix": 48, "len": 16, "max": 1191, "div": 55, "unit": "psi" }, "name": "Air conditioning high side pressure"}
@@ -1906,6 +1927,10 @@
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "A8"}, "freq": 30,
   "signals": [
     {"id": "PEUGEOT_FLI", "path": "Fuel", "fmt": {"bix": 96, "len": 16, "max": 255, "div": 256, "unit": "percent" }, "name": "Fuel level"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "B1"}, "freq": 3600,
+  "signals": [
+    {"id": "PEUGEOT_REGEN_CNT", "path": "Engine", "fmt": {"bix": 152, "len": 16, "max": 65535, "unit": "scalar" }, "name": "Regeneration counter"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "B2"}, "freq": 5,
   "signals": [
@@ -1922,6 +1947,10 @@
   "signals": [
     {"id": "PEUGEOT_FUEL_P_SENS_1000_S", "path": "Fuel",    "fmt": {           "len": 16, "max": 118,            "div": 552,            "unit": "psi"        }, "name": "Fuel pressure sensor, 1000's psi"},
     {"id": "PEUGEOT_CHG_AIR_COOLER_T",   "path": "Battery", "fmt": {"bix": 96, "len": 16, "max": 1875, "mul": 9, "div": 320, "add": 32, "unit": "fahrenheit" }, "name": "Charge air cooler outlet temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "B7"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_FUEL_P_V2", "path": "Fuel", "fmt": {"bix": 200, "len": 16, "max": 6553, "div": 10, "unit": "kilopascal" }, "name": "Fuel pressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "CA"}, "freq": 5,
   "signals": [
@@ -1998,6 +2027,7 @@
   "signals": [
     {"id": "PEUGEOT_OIL_TEMEPRATURE",  "path": "Engine", "fmt": {"bix": 160, "len": 16, "max": 6280,    "min": -273,     "div": 10,  "add": -273.14,               "unit": "celsius" }, "name": "Oil temperature"},
     {"id": "PEUGEOT_EOT",              "path": "Engine", "fmt": {"bix": 160, "len": 16, "max": 3003.56, "min": -3549.94, "div": 10,  "add": -273.14, "sign": true, "unit": "celsius" }, "name": "Engine oil temperature",                        "suggestedMetric": "engineOilTemperature"},
+    {"id": "PEUGEOT_EOT_0168",         "path": "Engine", "fmt": {"bix": 160, "len": 16, "max": 3003.56, "min": -3549.94, "div": 10,  "add": -273.14, "sign": true, "unit": "celsius" }, "name": "Engine oil temperature"},
     {"id": "PEUGEOT_SENSED_P_PF_DN",   "path": "Engine", "fmt": {"bix": 176, "len": 16, "max": 32767,   "min": -32768,                               "sign": true, "unit": "unknown" }, "name": "Sensed pressure particulate filter downstream"},
     {"id": "PEUGEOT_TURBINE_UP_T",     "path": "Engine", "fmt": {"bix": 224, "len": 16, "max": 6280.36, "min": -273.14,  "div": 10,  "add": -273.14,               "unit": "celsius" }, "name": "Turbine upstream temperature"},
     {"id": "PEUGEOT_T_BEFORE_CAT",     "path": "Engine", "fmt": {"bix": 240, "len": 16, "max": 6280.36, "min": -273.14,  "div": 10,  "add": -273.14,               "unit": "celsius" }, "name": "Temperature before catalyst"},
