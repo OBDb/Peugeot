@@ -1,11 +1,12 @@
 { "ecu": [
-    { "hdr": "7E0",  "type": "engine" },
-    { "hdr": "7E1",  "type": "transmission" },
-    { "hdr": "DA10", "type": "engine" },
-    { "hdr": "DA18", "type": "transmission" },
-    { "hdr": "DA30", "type": "abs" },
-    { "hdr": "DA40", "type": "bodyControl" },
-    { "hdr": "DAC7", "type": "tpms" }
+    { "hdr": "6B4",  "rax": "694", "type": "battery" },
+    { "hdr": "7E0",                "type": "engine" },
+    { "hdr": "7E1",                "type": "transmission" },
+    { "hdr": "DA10",               "type": "engine" },
+    { "hdr": "DA18",               "type": "transmission" },
+    { "hdr": "DA30",               "type": "abs" },
+    { "hdr": "DA40",               "type": "bodyControl" },
+    { "hdr": "DAC7",               "type": "tpms" }
   ],
   "commands": [
 { "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D402"}, "freq": 1,
@@ -1697,13 +1698,18 @@
   "signals": [
     {"id": "PEUGEOT_VSS_6B4", "path": "Movement", "fmt": { "len": 32, "max": 4194368, "mul": 64, "div": 65535, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
   ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D804"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_HV_BUS_V", "path": "Battery", "fmt": { "len": 16, "max": 500, "div": 10, "unit": "volts" }, "name": "High voltage bus voltage", "description": "Measured downstream of the main contactors. Reads 0 V when they are open, while 308_HV_BATT_V keeps reporting the pack's own terminal voltage."}
+  ]},
 { "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D810"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_HVBAT_SOC_RAW", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 512, "unit": "percent" }, "name": "High voltage battery charge", "suggestedMetric": "stateOfCharge"}
   ]},
 { "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D815"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_HVBAT_VOLT", "path": "Battery", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "volts" }, "name": "High voltage battery voltage"}
+    {"id": "PEUGEOT_HVBAT_VOLT", "path": "Battery", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "volts" }, "name": "High voltage battery voltage"},
+    {"id": "PEUGEOT_HV_BATT_V",  "path": "Battery", "fmt": { "len": 16, "max": 500,  "div": 10, "unit": "volts" }, "name": "Traction battery voltage",     "suggestedMetric": "tractionBatteryVoltage"}
   ]},
 { "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D816"}, "freq": 1,
   "signals": [
@@ -1721,9 +1727,18 @@
   "signals": [
     {"id": "PEUGEOT_HVBAT_SOH", "path": "Battery", "fmt": {"bix": 8, "len": 16, "max": 100, "div": 16, "unit": "percent" }, "name": "High voltage battery health", "suggestedMetric": "stateOfHealth"}
   ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D862"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_HV_BATT_SOC_MIN", "path": "Battery", "fmt": { "len": 8, "max": 100, "unit": "percent" }, "name": "Traction battery minimum state of charge"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D863"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_HV_BATT_SOC", "path": "Battery", "fmt": { "len": 8, "max": 100, "unit": "percent" }, "name": "Traction battery state of charge", "suggestedMetric": "stateOfCharge"}
+  ]},
 { "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D865"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_HVBAT_KWH", "path": "Battery", "fmt": { "len": 16, "max": 1023, "div": 64, "unit": "kilowattHours" }, "name": "HV battery energy", "description": "Energy stored in the high voltage battery"}
+    {"id": "PEUGEOT_HVBAT_KWH",          "path": "Battery", "fmt": { "len": 16, "max": 1023, "div": 64,  "unit": "kilowattHours" }, "name": "HV battery energy",                                 "description": "Energy stored in the high voltage battery"},
+    {"id": "PEUGEOT_HV_BATT_SOC_HI_RES", "path": "Battery", "fmt": { "len": 16, "max": 100,  "div": 100, "unit": "percent"       }, "name": "Traction battery state of charge, high resolution", "description": "Tracks the charge level, 1-2 points below 308_HV_BATT_SOC."}
   ]},
 { "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D86F"}, "freq": 1,
   "signals": [
@@ -2975,7 +2990,7 @@
   "signals": [
     {"id": "PEUGEOT_BAT_HEATER_DES_POWER", "path": "Battery", "fmt": {           "len": 16, "max": 1310700, "mul": 20, "unit": "scalar" }, "name": "Battery heater, desired power consumption"},
     {"id": "PEUGEOT_BAT_HEATER_ACT_POWER", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 1310700, "mul": 20, "unit": "scalar" }, "name": "Battery heater, actual power consumption"},
-    {"id": "PEUGEOT_HV_BUS_V",             "path": "Battery", "fmt": {"bix": 32, "len": 16, "max": 65535,              "unit": "volts"  }, "name": "HV bus voltage"}
+    {"id": "PEUGEOT_HV_BUS_V_V2",          "path": "Battery", "fmt": {"bix": 32, "len": 16, "max": 65535,              "unit": "volts"  }, "name": "HV bus voltage"}
   ]},
 { "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "4053"}, "freq": 5,
   "signals": [
