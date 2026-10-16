@@ -1,5 +1,8 @@
 { "ecu": [
     { "hdr": "6B4",  "rax": "694", "type": "battery" },
+    { "hdr": "6B5",  "rax": "695", "type": "steering" },
+    { "hdr": "74D",  "rax": "64D", "type": "transmission" },
+    { "hdr": "752",  "rax": "652", "type": "bodyControl" },
     { "hdr": "7E0",                "type": "engine" },
     { "hdr": "7E1",                "type": "transmission" },
     { "hdr": "DA10",               "type": "engine" },
@@ -1776,6 +1779,57 @@
   "signals": [
     {"id": "PEUGEOT_BAT_MIN_UNIT_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery min unit temperature"}
   ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D403"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_VSS_EPS", "path": "Movement", "fmt": { "len": 16, "max": 655.35, "div": 100, "unit": "kilometersPerHour" }, "name": "Vehicle speed (power steering)"}
+  ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D404"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EPS_SUPPLY_V", "path": "Electrical", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Power steering supply voltage"}
+  ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D405"}, "freq": 5,
+  "signals": [
+    {"id": "PEUGEOT_EPS_T", "path": "Control", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Power steering module temperature"}
+  ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D407"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EPS_ENGINE_STATE", "path": "Control", "name": "Engine state seen by power steering", "fmt": {"len": 8, "map": {
+          "4": { "description": "Engine stopped", "value": "Engine stopped" }
+        }}
+    }
+  ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D408"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EPS_IGNITION", "path": "Control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Ignition on (power steering)?"}
+  ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D409"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EPS_ASSIST_ACTIVE", "path": "Control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Power steering assistance active?"}
+  ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D40A"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_EPS_ASSIST_LIMITED", "path": "Control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Power steering assistance limited by overheating?", "description": "Read as set in READY with a cool module; meaning not confirmed."}
+  ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D40D"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_STEERING_ANGLE", "path": "Control", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "degrees" }, "name": "Steering wheel angle", "description": "Positive to the left."}
+  ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D40F"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_STEERING_TORQUE", "path": "Control", "fmt": { "len": 8, "max": 12.7, "min": -12.8, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Steering wheel torque"}
+  ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D410"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_EPS_ASSIST_TORQUE", "path": "Control", "fmt": { "len": 8, "max": 127, "min": -128, "sign": true, "unit": "newtonMeters" }, "name": "Requested power steering assistance torque", "description": "Scale unconfirmed: read 0-1 while the assistance torque was 1-2 N.m."}
+  ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D417"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_STEERING_ANGLE_TGT", "path": "Control", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "degrees" }, "name": "Steering wheel angle setpoint"}
+  ]},
+{ "hdr": "6B5", "rax": "695", "fcm1": true, "dbg": true, "cmd": {"22": "D418"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_STEERING_RATE", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Steering wheel rotation speed", "description": "Zero when still; scale unknown."}
+  ]},
 { "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0A1"}, "freq": 15,
   "signals": [
     {"id": "PEUGEOT_TP_FL_AC", "path": "Tires", "fmt": {           "len": 8, "max": 255, "unit": "psi" }, "name": "Front left tire pressure, altitude compensated",  "suggestedMetric": "frontLeftTirePressure"},
@@ -1836,6 +1890,311 @@
     {"id": "PEUGEOT_TP_RL_V3",  "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
     {"id": "PEUGEOT_RR_TIRE_P", "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Rear right tire pressure"},
     {"id": "PEUGEOT_TP_RR_V3",  "path": "Tires", "fmt": {"bix": 48, "len": 8, "max": 255, "nullmax": 255, "unit": "psi" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"}
+  ]},
+{ "hdr": "74D", "rax": "64D", "fcm1": true, "dbg": true, "cmd": {"22": "0106"}, "freq": 60,
+  "signals": [
+    {"id": "PEUGEOT_SHIFTER_P_PRESSES", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Gear selector P button use count"}
+  ]},
+{ "hdr": "74D", "rax": "64D", "fcm1": true, "dbg": true, "cmd": {"22": "0107"}, "freq": 60,
+  "signals": [
+    {"id": "PEUGEOT_SHIFTER_MB_PRESSES", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Gear selector M/B button use count"}
+  ]},
+{ "hdr": "74D", "rax": "64D", "fcm1": true, "dbg": true, "cmd": {"22": "0108"}, "freq": 60,
+  "signals": [
+    {"id": "PEUGEOT_SHIFTER_LEVER_MOVES", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Gear selector lever use count"}
+  ]},
+{ "hdr": "74D", "rax": "64D", "fcm1": true, "dbg": true, "cmd": {"22": "D406"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_SHIFTER_P_BTN", "path": "Transmission", "fmt": { "len": 1, "max": 1, "unit": "noyes" }, "name": "Gear selector P button pressed?"}
+  ]},
+{ "hdr": "74D", "rax": "64D", "fcm1": true, "dbg": true, "cmd": {"22": "D407"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_SHIFTER_MB_BTN", "path": "Transmission", "fmt": { "len": 1, "max": 1, "unit": "noyes" }, "name": "Gear selector M/B button pressed?"}
+  ]},
+{ "hdr": "74D", "rax": "64D", "fcm1": true, "dbg": true, "cmd": {"22": "D408"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_SHIFTER_LEVER_POS", "path": "Transmission", "name": "Gear selector lever position", "description": "The impulse lever springs back to the centre; this is where it is held, not the gear engaged.", "fmt": {"len": 3, "map": {
+          "0": { "description": "Centre",                "value": "Centre" },
+          "1": { "description": "Forward, first notch",  "value": "Forward, first notch" },
+          "2": { "description": "Forward, second notch", "value": "Forward, second notch" },
+          "3": { "description": "Back, first notch",     "value": "Back, first notch" },
+          "4": { "description": "Back, second notch",    "value": "Back, second notch" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DAE0"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_DOOR_DRIVER_EST", "path": "Doors", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Driver door open (estimated)?", "description": "Estimate kept for when the door switch is faulty."}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DAFB"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_DOOR_DRIVER",    "path": "Doors", "fmt": {"bix": 7,  "len": 1, "max": 1, "unit": "noyes" }, "name": "Driver door open?"},
+    {"id": "PEUGEOT_DOOR_PASSENGER", "path": "Doors", "fmt": {"bix": 15, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front passenger door open?"},
+    {"id": "PEUGEOT_DOOR_RL",        "path": "Doors", "fmt": {"bix": 23, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear left door open?"},
+    {"id": "PEUGEOT_DOOR_RR",        "path": "Doors", "fmt": {"bix": 31, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear right door open?"},
+    {"id": "PEUGEOT_REAR_WINDOW",    "path": "Doors", "fmt": {"bix": 39, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear window open?",          "description": "Bit position inferred from its neighbours; not yet seen to change."},
+    {"id": "PEUGEOT_TAILGATE",       "path": "Doors", "fmt": {"bix": 47, "len": 1, "max": 1, "unit": "noyes" }, "name": "Tailgate open?",             "description": "Bit position inferred from its neighbours; not yet seen to change."},
+    {"id": "PEUGEOT_BONNET",         "path": "Doors", "fmt": {"bix": 55, "len": 1, "max": 1, "unit": "noyes" }, "name": "Bonnet open?",               "description": "Bit position inferred from its neighbours; not yet seen to change."}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DAFF"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_LOCK_BOOT", "path": "Doors", "name": "Boot lock", "fmt": {"len": 8, "map": {
+          "0": { "description": "Locked",   "value": "Locked" },
+          "1": { "description": "Unlocked", "value": "Unlocked" }
+        }}
+    },
+    {"id": "PEUGEOT_LOCK_VEHICLE", "path": "Doors", "name": "Vehicle lock", "fmt": {"bix": 8, "len": 8, "map": {
+          "1": { "description": "Locked",   "value": "Locked" },
+          "3": { "description": "Unlocked", "value": "Unlocked" }
+        }}
+    },
+    {"id": "PEUGEOT_LOCK_TAILGATE", "path": "Doors", "name": "Tailgate lock", "fmt": {"bix": 16, "len": 8, "map": {
+          "0": { "description": "Unlocked", "value": "Unlocked" },
+          "1": { "description": "Locked",   "value": "Locked" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB07"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_HAZARD_LED", "path": "Lights", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Hazard switch LED on?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB08"}, "freq": 0.5,
+  "signals": [
+    {"id": "PEUGEOT_TURN_LEFT", "path": "Lights", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Left turn signal on?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB09"}, "freq": 0.5,
+  "signals": [
+    {"id": "PEUGEOT_TURN_RIGHT", "path": "Lights", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Right turn signal on?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB0A"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_HORN", "path": "Control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Horn sounding?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB0B"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_REVERSE_LIGHTS", "path": "Lights", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Reverse lights on?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB0C"}, "freq": 0.5,
+  "signals": [
+    {"id": "PEUGEOT_BRAKE_LIGHTS", "path": "Lights", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Brake lights on?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB0E"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_PLATE_LIGHTS", "path": "Lights", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Number plate lights on?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB17"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CC_ENGINE_STATE", "path": "Cruise control", "name": "Speed control state in engine ECU", "description": "Paired with 308_ACC_SELECTED by poll order.", "fmt": {"len": 8, "map": {
+          "0": { "description": "Waiting",   "value": "Waiting" },
+          "3": { "description": "Inhibited", "value": "Inhibited" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB19"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CC_STATE", "path": "Cruise control", "name": "Speed control function state", "fmt": {"len": 8, "map": {
+          "0": { "description": "Paused",                        "value": "Paused" },
+          "1": { "description": "Active, setpoint not exceeded", "value": "Active, setpoint not exceeded" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB1B"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ACC_TIME_GAP", "path": "Cruise control", "fmt": { "len": 8, "max": 6.1, "div": 10, "nullmax": 6.2, "unit": "seconds" }, "name": "Adaptive cruise time gap", "description": "0x3E means no setpoint (speed limiter selected)."}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB1D"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CC_SW_MINUS", "path": "Cruise control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Speed control minus pressed?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB1E"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CC_SW_PLUS", "path": "Cruise control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Speed control plus pressed?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB1F"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CC_SW_PAUSE", "path": "Cruise control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Speed control pause/resume pressed?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB21"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CC_SW_MODE", "path": "Cruise control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Cruise control mode button pressed?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB22"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_SWC_OK", "path": "Cruise control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Steering wheel OK button pressed?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB24"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CC_MODE", "path": "Cruise control", "name": "Speed control mode requested", "fmt": {"len": 8, "map": {
+          "0": { "description": "None",                    "value": "None" },
+          "2": { "description": "Speed limiter",           "value": "Speed limiter" },
+          "3": { "description": "Adaptive cruise control", "value": "Adaptive cruise control" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB28"}, "freq": 60,
+  "signals": [
+    {"id": "PEUGEOT_CC_STEP", "path": "Cruise control", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "kilometersPerHour" }, "name": "Speed setpoint step"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB2E"}, "freq": 0.25,
+  "signals": [
+    {"id": "PEUGEOT_VSS_BSI", "path": "Movement", "fmt": { "len": 16, "max": 655.35, "div": 100, "unit": "kilometersPerHour" }, "name": "Vehicle speed (body control)", "description": "Follows the vehicle speed."}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB2F"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CC_SETTING", "path": "Cruise control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Speed setpoint being adjusted?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB31"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ACC_SELECTED", "path": "Cruise control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Adaptive cruise control selected?", "description": "Paired with 308_CC_ENGINE_STATE by poll order."}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB32"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ACC_ACTIVE", "path": "Cruise control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Adaptive cruise control activated?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB34"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ACC_SPEED", "path": "Cruise control", "fmt": { "len": 8, "max": 254, "nullmax": 255, "unit": "kilometersPerHour" }, "name": "Adaptive cruise regulation speed"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB37"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ACC_DISPLAY_STATE", "path": "Cruise control", "name": "Adaptive cruise state shown to driver", "fmt": {"len": 8, "map": {
+          "4": { "description": "Activated", "value": "Activated" },
+          "5": { "description": "Inhibited", "value": "Inhibited" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB3A"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ACC_BRAKING", "path": "Cruise control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Adaptive cruise holding the brakes?", "description": "Set while ACC holds the car at a standstill, cleared as it moves off. Inferred from behaviour."}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB51"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BELT_DRIVER", "path": "Seatbelts", "name": "Driver seatbelt", "fmt": {"len": 8, "map": {
+          "1": { "description": "Unbuckled", "value": "Unbuckled" },
+          "2": { "description": "Buckled",   "value": "Buckled" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB83"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BELT_PASSENGER", "path": "Seatbelts", "name": "Front passenger seatbelt", "fmt": {"len": 8, "map": {
+          "1": { "description": "Unbuckled", "value": "Unbuckled" },
+          "2": { "description": "Buckled",   "value": "Buckled" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB84"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BELT_RR", "path": "Seatbelts", "name": "Rear right seatbelt", "fmt": {"len": 8, "map": {
+          "1": { "description": "Unbuckled", "value": "Unbuckled" },
+          "2": { "description": "Buckled",   "value": "Buckled" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB85"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BELT_RC", "path": "Seatbelts", "name": "Rear centre seatbelt", "fmt": {"len": 8, "map": {
+          "1": { "description": "Unbuckled", "value": "Unbuckled" },
+          "2": { "description": "Buckled",   "value": "Buckled" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB86"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_BELT_RL", "path": "Seatbelts", "name": "Rear left seatbelt", "fmt": {"len": 8, "map": {
+          "1": { "description": "Unbuckled", "value": "Unbuckled" },
+          "2": { "description": "Buckled",   "value": "Buckled" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB9F"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_REAR_FOG", "path": "Lights", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear fog light on?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DBAD"}, "freq": 0.5,
+  "signals": [
+    {"id": "PEUGEOT_BRAKE_SW", "path": "Brakes", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Brake pedal pressed (main switch)?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DBB0"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_HIGH_BEAM", "path": "Lights", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "High beam on?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DBB1"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_LOW_BEAM", "path": "Lights", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Dipped beam on?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DBD4"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_LOCK_LED", "path": "Doors", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Central locking LED on?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DBF4"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_WINDOWS_ALLOWED", "path": "Windows", "name": "Power windows allowed", "fmt": {"len": 8, "map": {
+          "1": { "description": "Front only",     "value": "Front only" },
+          "2": { "description": "Front and rear", "value": "Front and rear" }
+        }}
+    },
+    {"id": "PEUGEOT_REAR_WINDOWS_LOCK_LED", "path": "Windows", "name": "Rear window lock LED", "fmt": {"bix": 8, "len": 8, "map": {
+          "0": { "description": "Off", "value": "Off" },
+          "2": { "description": "On",  "value": "On" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DBF5"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_LIGHT_SWITCH", "path": "Lights", "name": "Lighting stalk position", "fmt": {"len": 8, "map": {
+          "1": { "description": "Auto",            "value": "Auto" },
+          "2": { "description": "Position lights", "value": "Position lights" },
+          "3": { "description": "Dipped beam",     "value": "Dipped beam" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DBF8"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_DOOR_OPEN_ALERT", "path": "Doors", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Door open alert active?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DC23"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ACC_RADAR_STATE", "path": "Cruise control", "name": "Adaptive cruise state from front radar", "fmt": {"len": 8, "map": {
+          "0": { "description": "Unavailable",               "value": "Unavailable" },
+          "3": { "description": "Holding speed",             "value": "Holding speed" },
+          "7": { "description": "Automatic start prevented", "value": "Automatic start prevented" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DC24"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_ACC_TARGET_DIST", "path": "Cruise control", "fmt": { "len": 16, "max": 256.25, "div": 4, "add": 1, "nullmax": 256.5, "unit": "meters" }, "name": "Distance to the vehicle ahead", "description": "Encoding assumed from a single point: 0x03FE read as 256.5 m with no target."}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DC3F"}, "freq": 0.5,
+  "signals": [
+    {"id": "PEUGEOT_BRAKE_SW_2", "path": "Brakes", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Brake pedal pressed (secondary switch)?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DC88"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_REGEN_B_REQUEST", "path": "Transmission", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "B (brake regeneration) button pressed?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DC96"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_GEAR_SELECTED", "path": "Transmission", "name": "Selected gear", "fmt": {"len": 8, "map": {
+          "0": { "description": "P", "value": "P" },
+          "1": { "description": "R", "value": "R" },
+          "2": { "description": "N", "value": "N" },
+          "3": { "description": "D", "value": "D" }
+        }}
+    }
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DCBE"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_LIMITER_REQUEST", "path": "Cruise control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Speed limiter activation requested?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DCBF"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CC_REQUEST", "path": "Cruise control", "fmt": {"bix": 7, "len": 1, "max": 1, "unit": "noyes" }, "name": "Cruise control activation requested?"}
+  ]},
+{ "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DCC0"}, "freq": 1,
+  "signals": [
+    {"id": "PEUGEOT_CC_SETPOINT", "path": "Cruise control", "fmt": { "len": 8, "max": 254, "nullmax": 255, "unit": "kilometersPerHour" }, "name": "Speed control setpoint"}
   ]},
 { "hdr": "763", "rax": "4E3", "fcm1": true, "dbg": true, "cmd": {"22": "032D"}, "freq": 2,
   "signals": [
