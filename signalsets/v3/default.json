@@ -2290,7 +2290,7 @@
   ]},
 { "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DC96"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_GEAR_SELECTED", "path": "Transmission", "name": "Selected gear", "fmt": {"len": 8, "map": {
+    {"id": "PEUGEOT_GEAR_SELECTED", "path": "Transmission", "name": "Selected gear", "suggestedMetric": "gearSelector", "fmt": {"len": 8, "map": {
           "0": { "description": "P", "value": "P" },
           "1": { "description": "R", "value": "R" },
           "2": { "description": "N", "value": "N" },
@@ -2560,9 +2560,9 @@
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "01"}, "freq": 1,
   "signals": [
     {"id": "PEUGEOT_CALCULATED_LOAD_7E0",       "path": "Engine",   "fmt": {            "len": 8,  "max": 100,                  "mul": 100, "div": 255,              "unit": "percent"           }, "name": "Calculated load"},
-    {"id": "PEUGEOT_MAP_7E0",                   "path": "Engine",   "fmt": {"bix": 32,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Manifold absolute pressure"},
-    {"id": "PEUGEOT_INTAKE_AIR_7E0",            "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 215,      "min": -40,                          "add": -40, "unit": "celsius"           }, "name": "Intake air temperature"},
-    {"id": "PEUGEOT_ATMOSPHERE_PRESSURE",       "path": "Engine",   "fmt": {"bix": 48,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Atmospheric pressure"},
+    {"id": "PEUGEOT_MAP_7E0",                   "path": "Engine",   "fmt": {"bix": 32,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Manifold absolute pressure",        "suggestedMetric": "absoluteBoostPressure"},
+    {"id": "PEUGEOT_INTAKE_AIR_7E0",            "path": "Engine",   "fmt": {"bix": 40,  "len": 8,  "max": 215,      "min": -40,                          "add": -40, "unit": "celsius"           }, "name": "Intake air temperature",            "suggestedMetric": "intakeAirTemperature"},
+    {"id": "PEUGEOT_ATMOSPHERE_PRESSURE",       "path": "Engine",   "fmt": {"bix": 48,  "len": 8,  "max": 255,                                                       "unit": "kilopascal"        }, "name": "Atmospheric pressure",              "suggestedMetric": "barometricPressure"},
     {"id": "PEUGEOT_COOLANT_TEMP_7E0",          "path": "Engine",   "fmt": {"bix": 56,  "len": 8,  "max": 215,      "min": -40,                          "add": -40, "unit": "celsius"           }, "name": "Coolant temperature"},
     {"id": "PEUGEOT_ENGINE_SPEED_7E0",          "path": "Engine",   "fmt": {"bix": 64,  "len": 16, "max": 16383.75,                         "div": 4,                "unit": "rpm"               }, "name": "Engine speed"},
     {"id": "PEUGEOT_VEHICLE_SPEED_7E0",         "path": "Movement", "fmt": {"bix": 80,  "len": 8,  "max": 255,                                                       "unit": "kilometersPerHour" }, "name": "Vehicle speed",                     "suggestedMetric": "speed"},
@@ -2600,7 +2600,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "06"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_MIL",                            "path": "DTCs", "fmt": {           "len": 1,  "max": 1,     "unit": "offon"      }, "name": "MIL"},
+    {"id": "PEUGEOT_MIL",                            "path": "DTCs", "fmt": {           "len": 1,  "max": 1,     "unit": "offon"      }, "name": "MIL",                                 "suggestedMetric": "checkEngineLightOn"},
     {"id": "PEUGEOT_NUMBER_OF_EMISSION_DTC",         "path": "DTCs", "fmt": {"bix": 1,  "len": 7,  "max": 127,   "unit": "scalar"     }, "name": "Number of emission DTC"},
     {"id": "PEUGEOT_COMPLETE_PARTS_MONITOR_AVAIL",   "path": "DTCs", "fmt": {"bix": 13, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "Complete parts monitor available?"},
     {"id": "PEUGEOT_FUEL_SYSTEM_MONITOR_AVAIL",      "path": "DTCs", "fmt": {"bix": 14, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "Fuel system monitor available?"},
@@ -2638,7 +2638,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "0F"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_IAT_21", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Intake air temperature"}
+    {"id": "PEUGEOT_IAT_21", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Intake air temperature", "suggestedMetric": "intakeAirTemperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "10"}, "freq": 1,
   "signals": [
@@ -2982,7 +2982,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D3"}, "freq": 0.25,
   "signals": [
-    {"id": "PEUGEOT_CRUISE_CTRL_SPD", "path": "Movement", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control speed"},
+    {"id": "PEUGEOT_CRUISE_CTRL_SPD", "path": "Movement", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control speed", "suggestedMetric": "cruiseSetSpeed"},
     {"id": "PEUGEOT_CRUISE_CTRL_ON",  "path": "Engine",   "fmt": {"bix": 25, "len": 1, "max": 1,   "unit": "offon"             }, "name": "Cruise control on"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D6"}, "freq": 30,
@@ -3063,7 +3063,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0109"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_BAROMETRIC_P", "path": "Engine", "fmt": { "len": 16, "max": 13107, "div": 5, "unit": "kilopascal" }, "name": "Barometric pressure"}
+    {"id": "PEUGEOT_BAROMETRIC_P", "path": "Engine", "fmt": { "len": 16, "max": 13107, "div": 5, "unit": "kilopascal" }, "name": "Barometric pressure", "suggestedMetric": "barometricPressure"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "011D"}, "freq": 5,
   "signals": [
@@ -3151,7 +3151,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "01FF"}, "freq": 5,
   "signals": [
-    {"id": "PEUGEOT_IAT_01FF", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Intake manifold air temperature"}
+    {"id": "PEUGEOT_IAT_01FF", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 191, "min": -64, "add": -64, "unit": "celsius" }, "name": "Intake manifold air temperature", "suggestedMetric": "intakeAirTemperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "0227"}, "freq": 1,
   "signals": [
@@ -3852,7 +3852,7 @@
   ]},
 { "hdr": "DA10", "rax": "10", "din": "03", "dbg": true, "cmd": {"22": "195A"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_BOOST", "path": "Engine", "fmt": { "len": 16, "max": 300, "min": -100, "div": 10, "add": -3276.8, "unit": "kilopascal" }, "name": "Turbo boost pressure"}
+    {"id": "PEUGEOT_BOOST", "path": "Engine", "fmt": { "len": 16, "max": 300, "min": -100, "div": 10, "add": -3276.8, "unit": "kilopascal" }, "name": "Turbo boost pressure", "suggestedMetric": "absoluteBoostPressure"}
   ]},
 { "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"22": "195B"}, "freq": 1,
   "signals": [
@@ -4009,10 +4009,10 @@
   "signals": [
     {"id": "PEUGEOT_STEER_ANGLE_V2", "path": "Control", "fmt": { "len": 16, "max": 720, "min": -720, "div": 10, "add": -720, "unit": "degrees" }, "name": "Steering wheel angle"}
   ]},
-{ "hdr": "DA30", "rax": "30", "dbg": true, "cmd": {"22": "2962"}, "freq": 0.1,
+{ "hdr": "DA30", "rax": "30", "dbg": true, "cmd": {"22": "2962"}, "freq": 0.25,
   "signals": [
-    {"id": "PEUGEOT_LAT_G_V2", "path": "Orientation", "fmt": {"bix": 4,   "len": 12, "max": 40.94, "min": -40.94, "div": 50, "add": -40.96, "nullmax": 40, "unit": "metersPerSecondSquared" }, "name": "Lateral acceleration"},
-    {"id": "PEUGEOT_LNG_G_V2", "path": "Orientation", "fmt": {"bix": 20,  "len": 12, "max": 40.94, "min": -40.94, "div": 50, "add": -40.96, "nullmax": 40, "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration"},
+    {"id": "PEUGEOT_LAT_G_V2", "path": "Orientation", "fmt": {"bix": 4,   "len": 12, "max": 40.94, "min": -40.94, "div": 50, "add": -40.96, "nullmax": 40, "unit": "metersPerSecondSquared" }, "name": "Lateral acceleration",      "suggestedMetric": "lateralAcceleration"},
+    {"id": "PEUGEOT_LNG_G_V2", "path": "Orientation", "fmt": {"bix": 20,  "len": 12, "max": 40.94, "min": -40.94, "div": 50, "add": -40.96, "nullmax": 40, "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration", "suggestedMetric": "longitudinalAcceleration"},
     {"id": "PEUGEOT_FL_VSS",   "path": "Movement",    "fmt": {"bix": 112, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Front left wheel speed"},
     {"id": "PEUGEOT_RL_VSS",   "path": "Movement",    "fmt": {"bix": 144, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Rear left wheel speed"},
     {"id": "PEUGEOT_FR_VSS",   "path": "Movement",    "fmt": {"bix": 176, "len": 16, "max": 4095,                 "div": 16,                               "unit": "kilometersPerHour"      }, "name": "Front right wheel speed"},
