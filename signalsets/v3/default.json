@@ -1978,12 +1978,12 @@
   ]},
 { "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0F3"}, "freq": 15,
   "signals": [
-    {"id": "PEUGEOT_TP_RR_740", "path": "Tires", "fmt": {           "len": 8,  "max": 101.49,             "mul": 0.398,                                           "unit": "psi"        }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
-    {"id": "PEUGEOT_TP_RR_F",   "path": "Tires", "fmt": {           "len": 16, "max": 6553.5,                           "div": 10,             "nullmax": 6553.5, "unit": "kilopascal" }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
-    {"id": "PEUGEOT_TP_RR_V2",  "path": "Tires", "fmt": {"bix": 8,  "len": 8,  "max": 63.75,                            "div": 4,                                 "unit": "psi"        }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
-    {"id": "PEUGEOT_TT_RR_740", "path": "Tires", "fmt": {"bix": 8,  "len": 8,  "max": 205,    "min": -50,                          "add": -50,                    "unit": "celsius"    }, "name": "Rear right tire temperature"},
-    {"id": "PEUGEOT_TT_RR_V2",  "path": "Tires", "fmt": {"bix": 16, "len": 8,  "max": 205,    "min": -50,                          "add": -50,                    "unit": "celsius"    }, "name": "Rear right tire temperature", "suggestedMetric": "rearRightTireTemperature"},
-    {"id": "PEUGEOT_TT_RR_F",   "path": "Tires", "fmt": {"bix": 32, "len": 8,  "max": 215,    "min": -40,                          "add": -40, "nullmax": 215,    "unit": "celsius"    }, "name": "Rear right tire temperature"}
+    {"id": "PEUGEOT_TP_RR_740", "path": "Tires", "fmt": {           "len": 8,  "max": 101.49,             "mul": 0.398,                                                         "unit": "psi"        }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
+    {"id": "PEUGEOT_TP_RR_F",   "path": "Tires", "fmt": {           "len": 16, "max": 6553.5,                           "div": 10,                           "nullmax": 6553.5, "unit": "kilopascal" }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
+    {"id": "PEUGEOT_TP_RR_V2",  "path": "Tires", "fmt": {"bix": 8,  "len": 8,  "max": 63.75,                            "div": 4,              "nullmin": 0,                    "unit": "psi"        }, "name": "Rear right tire pressure",    "suggestedMetric": "rearRightTirePressure"},
+    {"id": "PEUGEOT_TT_RR_740", "path": "Tires", "fmt": {"bix": 8,  "len": 8,  "max": 205,    "min": -50,                          "add": -50,                                  "unit": "celsius"    }, "name": "Rear right tire temperature"},
+    {"id": "PEUGEOT_TT_RR_V2",  "path": "Tires", "fmt": {"bix": 16, "len": 8,  "max": 205,    "min": -50,                          "add": -50,                                  "unit": "celsius"    }, "name": "Rear right tire temperature", "suggestedMetric": "rearRightTireTemperature"},
+    {"id": "PEUGEOT_TT_RR_F",   "path": "Tires", "fmt": {"bix": 32, "len": 8,  "max": 215,    "min": -40,                          "add": -40,               "nullmax": 215,    "unit": "celsius"    }, "name": "Rear right tire temperature"}
   ]},
 { "hdr": "740", "rax": "4C0", "fcm1": true, "dbg": true, "cmd": {"22": "A0F4"}, "freq": 15,
   "signals": [
@@ -2114,7 +2114,7 @@
   ]},
 { "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB1B"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_ACC_TIME_GAP", "path": "Cruise control", "fmt": { "len": 8, "max": 6.1, "div": 10, "nullmax": 6.2, "unit": "seconds" }, "name": "Adaptive cruise time gap", "description": "0x3E means no setpoint (speed limiter selected)."}
+    {"id": "PEUGEOT_ACC_TIME_GAP", "path": "Cruise control", "fmt": { "len": 8, "max": 6.2, "div": 10, "nullmax": 6.2, "unit": "seconds" }, "name": "Adaptive cruise time gap", "description": "0x3E means no setpoint (speed limiter selected)."}
   ]},
 { "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB1D"}, "freq": 1,
   "signals": [
@@ -2167,7 +2167,7 @@
   ]},
 { "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB34"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_ACC_SPEED", "path": "Cruise control", "fmt": { "len": 8, "max": 254, "nullmax": 255, "unit": "kilometersPerHour" }, "name": "Adaptive cruise regulation speed"}
+    {"id": "PEUGEOT_ACC_SPEED", "path": "Cruise control", "fmt": { "len": 8, "max": 255, "nullmax": 255, "unit": "kilometersPerHour" }, "name": "Adaptive cruise regulation speed"}
   ]},
 { "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DB37"}, "freq": 1,
   "signals": [
@@ -2278,7 +2278,7 @@
   ]},
 { "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DC24"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_ACC_TARGET_DIST", "path": "Cruise control", "fmt": { "len": 16, "max": 256.25, "div": 4, "add": 1, "nullmax": 256.5, "unit": "meters" }, "name": "Distance to the vehicle ahead", "description": "Encoding assumed from a single point: 0x03FE read as 256.5 m with no target."}
+    {"id": "PEUGEOT_ACC_TARGET_DIST", "path": "Cruise control", "fmt": { "len": 16, "max": 256.5, "div": 4, "add": 1, "nullmax": 256.5, "unit": "meters" }, "name": "Distance to the vehicle ahead", "description": "Encoding assumed from a single point: 0x03FE read as 256.5 m with no target."}
   ]},
 { "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DC3F"}, "freq": 0.5,
   "signals": [
@@ -2308,7 +2308,7 @@
   ]},
 { "hdr": "752", "rax": "652", "fcm1": true, "dbg": true, "cmd": {"22": "DCC0"}, "freq": 1,
   "signals": [
-    {"id": "PEUGEOT_CC_SETPOINT", "path": "Cruise control", "fmt": { "len": 8, "max": 254, "nullmax": 255, "unit": "kilometersPerHour" }, "name": "Speed control setpoint"}
+    {"id": "PEUGEOT_CC_SETPOINT", "path": "Cruise control", "fmt": { "len": 8, "max": 255, "nullmax": 255, "unit": "kilometersPerHour" }, "name": "Speed control setpoint"}
   ]},
 { "hdr": "763", "rax": "4E3", "fcm1": true, "dbg": true, "cmd": {"22": "032D"}, "freq": 2,
   "signals": [
@@ -2531,7 +2531,7 @@
   ]},
 { "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"22": "1021"}, "freq": 5,
   "signals": [
-    {"id": "PEUGEOT_BATTERY_VOLTAGE_7C0", "path": "Electrical", "fmt": { "len": 8, "max": 20, "div": 10, "unit": "volts" }, "name": "B+ battery voltage", "suggestedMetric": "starterBatteryVoltage"}
+    {"id": "PEUGEOT_BATTERY_VOLTAGE_7C0", "path": "Electrical", "fmt": { "len": 8, "max": 20, "div": 10, "nullmin": 0, "unit": "volts" }, "name": "B+ battery voltage", "suggestedMetric": "starterBatteryVoltage"}
   ]},
 { "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"22": "1022"}, "freq": 1,
   "signals": [
@@ -2872,11 +2872,11 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "54"}, "freq": 0.25,
   "signals": [
-    {"id": "PEUGEOT_RPM_CYL_1",      "path": "Movement", "fmt": {           "len": 16, "max": 51199, "mul": 25, "div": 32, "unit": "rpm" }, "name": "Engine speed of cylinder 1"},
-    {"id": "PEUGEOT_RPM_CYL_2",      "path": "Movement", "fmt": {"bix": 16, "len": 16, "max": 51199, "mul": 25, "div": 32, "unit": "rpm" }, "name": "Engine speed of cylinder 2"},
-    {"id": "PEUGEOT_RPM_CYL_3",      "path": "Movement", "fmt": {"bix": 32, "len": 16, "max": 51199, "mul": 25, "div": 32, "unit": "rpm" }, "name": "Engine speed of cylinder 3"},
-    {"id": "PEUGEOT_RPM_CYL_4",      "path": "Movement", "fmt": {"bix": 48, "len": 16, "max": 51199, "mul": 25, "div": 32, "unit": "rpm" }, "name": "Engine speed of cylinder 4"},
-    {"id": "PEUGEOT_AV_RPM_ALL_CYL", "path": "Movement", "fmt": {"bix": 64, "len": 16, "max": 51199, "mul": 25, "div": 32, "unit": "rpm" }, "name": "Average engine speed of all cylinders", "suggestedMetric": "engineSpeed"}
+    {"id": "PEUGEOT_RPM_CYL_1",      "path": "Movement", "fmt": {           "len": 16, "max": 51199, "mul": 25, "div": 32, "nullmax": 51199, "unit": "rpm" }, "name": "Engine speed of cylinder 1"},
+    {"id": "PEUGEOT_RPM_CYL_2",      "path": "Movement", "fmt": {"bix": 16, "len": 16, "max": 51199, "mul": 25, "div": 32, "nullmax": 51199, "unit": "rpm" }, "name": "Engine speed of cylinder 2"},
+    {"id": "PEUGEOT_RPM_CYL_3",      "path": "Movement", "fmt": {"bix": 32, "len": 16, "max": 51199, "mul": 25, "div": 32, "nullmax": 51199, "unit": "rpm" }, "name": "Engine speed of cylinder 3"},
+    {"id": "PEUGEOT_RPM_CYL_4",      "path": "Movement", "fmt": {"bix": 48, "len": 16, "max": 51199, "mul": 25, "div": 32, "nullmax": 51199, "unit": "rpm" }, "name": "Engine speed of cylinder 4"},
+    {"id": "PEUGEOT_AV_RPM_ALL_CYL", "path": "Movement", "fmt": {"bix": 64, "len": 16, "max": 51199, "mul": 25, "div": 32, "nullmax": 51199, "unit": "rpm" }, "name": "Average engine speed of all cylinders", "suggestedMetric": "engineSpeed"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "57"}, "freq": 1,
   "signals": [
@@ -4020,9 +4020,9 @@
   ]},
 { "hdr": "DA40", "rax": "40", "dbg": true, "cmd": {"22": "1004"}, "freq": 30,
   "signals": [
-    {"id": "PEUGEOT_BATT_V_BCM",    "path": "Battery", "fmt": { "len": 8,  "max": 51,     "div": 5,    "unit": "volts" }, "name": "Battery voltage, body computer", "suggestedMetric": "starterBatteryVoltage"},
-    {"id": "PEUGEOT_BATT_V_BCM_MV", "path": "Battery", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "volts" }, "name": "Battery voltage, BCM"},
-    {"id": "PEUGEOT_BCM_BAT_V",     "path": "Battery", "fmt": { "len": 8,  "max": 25.5,   "div": 10,   "unit": "volts" }, "name": "Battery voltage, BCM",           "suggestedMetric": "starterBatteryVoltage"}
+    {"id": "PEUGEOT_BATT_V_BCM",    "path": "Battery", "fmt": { "len": 8,  "max": 40.8,   "mul": 4, "div": 25,   "unit": "volts" }, "name": "Battery voltage, body computer", "suggestedMetric": "starterBatteryVoltage"},
+    {"id": "PEUGEOT_BATT_V_BCM_MV", "path": "Battery", "fmt": { "len": 16, "max": 65.535,           "div": 1000, "unit": "volts" }, "name": "Battery voltage, BCM"},
+    {"id": "PEUGEOT_BCM_BAT_V",     "path": "Battery", "fmt": { "len": 8,  "max": 25.5,             "div": 10,   "unit": "volts" }, "name": "Battery voltage, BCM",           "suggestedMetric": "starterBatteryVoltage"}
   ]},
 { "hdr": "DA42", "rax": "42", "dbg": true, "cmd": {"22": "019E"}, "freq": 5,
   "signals": [
